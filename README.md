@@ -1,4 +1,4 @@
-# basic_python
+# Basic_python
 PYTHON VARIABLES AND DATA TYPES
     - HI Welcome! If you're just starting out python. This guide will give you a quick overview of the fundamentals. 
    -  Python is a powerfull,readable, and beginner-friendly programming language used in web development,AI,
