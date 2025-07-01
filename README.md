@@ -236,6 +236,100 @@ return f"Hello, {name}"
 * [Python Official Docs - Data Types](https://docs.python.org/3/library/stdtypes.html)
 * [PEP 484 - Type Hints](https://peps.python.org/pep-0484/)
 
----
+
+
+
+
+# Python Variable Naming Rules
+
+In Python, variables are used to store data. Naming variables properly is essential for readable and maintainable code.
+
+
+##  Rules for Naming Variables
+
+## Valid Variable Names
+
+* Must start with a **letter** (`A–Z`, `a–z`) or an **underscore** (`_`)
+* Can contain letters, digits (`0–9`), and underscores (`_`)
+* **Case-sensitive** (`name`, `Name`, and `NAME` are different variables)
+* **Cannot be a Python keyword**
+
+python
+# Valid examples
+name = "Arun"
+_age = 20
+user_1 = "admin"
+pi_value = 3.1415
+
+
+
+## Invalid Variable Names
+
+python
+2cool = "nope"        # ❌ Starts with a digit
+first-name = "John"   # ❌ Hyphen not allowed
+class = "Physics"     # ❌ 'class' is a reserved keyword
+
+
+##  Best Practices (PEP 8 Style Guide)
+
+* Use **lowercase letters** and **underscores** for variable names:
+
+  python
+  user_name = "arun"
+  total_amount = 100.0
+  
+
+* Use **UPPER\_CASE** for constants:
+
+  python
+  MAX_RETRIES = 5
+  
+
+* Avoid using:
+
+  * Single characters like `l`, `O`, or `I` (easily confused with numbers)
+  * Ambiguous names like `data1`, `data2`, etc.
+
+
+
+## Reserved Keywords (Don’t Use as Variable Names)
+
+These are built-in and have special meaning in Python:
+
+
+  ( False, None, True, and, as, assert, break, class, continue, def, del,
+elif, else, except, finally, for, from, global, if, import, in, is,
+lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield )
+
+
+You can get the full list programmatically:
+
+python
+import keyword
+print(keyword.kwlist)
+
+
+## Quick Check
+
+| Variable Name | Valid? | Reason                 |
+| ------------- | ------ | ---------------------- |
+| `_user`       | ✅     | Starts with underscore |
+| `user_123`    | ✅     | Alphanumeric + `_`     |
+| `123user`     | ❌     | Starts with digit      |
+| `user-name`   | ❌     | Hyphen not allowed     |
+| `def`         | ❌     | Python keyword         |
+
+
+
+##  References
+
+* [PEP 8 - Python Style Guide](https://peps.python.org/pep-0008/#naming-conventions)
+* [Python Keywords (Official Docs)](https://docs.python.org/3/reference/lexical_analysis.html#keywords)
+
+
+
+
+
 
 
