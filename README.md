@@ -25,6 +25,8 @@ HELLO WORLD EXAMPLE
 python
 print ("hello world")
 
+
+---
                                 
 
  ##  Python Variables
@@ -430,6 +432,43 @@ User Info: {'name': 'Arun', 'age': 21, 'is_student': True}
 * No need to use `var`, `int`, `string`, etc.
 * Use descriptive names (`name`, `hobbies`) instead of `x`, `a1`.
 * Python uses dynamic typing — you can change the type later.
+
+
+---
+
+##  Printing Variable Values in Python
+
+Use the `print()` function to display variable values in the console.
+
+## Example
+
+python
+name = "Arun"
+age = 21
+
+# Print individual variables
+print(name)
+print(age)
+
+# Print with custom message
+print("Name:", name)
+print("Age:", age)
+
+# Using f-string (Python 3.6+)
+print(f"My name is {name} and I am {age} years old.")
+```
+
+## Output
+
+
+Arun
+21
+Name: Arun
+Age: 21
+My name is Arun and I am 21 years old.
+
+
+---
 
 
 
