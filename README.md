@@ -352,14 +352,14 @@ python
 age = 25
 
 # String
-name = "Alice"
+name = "Arun"
 
 # Float
 price = 19.99
 
 # Boolean
 is_active = True
-```
+
 
 ## Variable Naming Rules
 
@@ -383,6 +383,54 @@ print(type(x))  # <class 'str'>
 * Use **meaningful names** (`user_name` instead of `x`)
 * Use **snake\_case** for variable names (e.g., `total_amount`)
 * Use **lowercase letters** (constants can be in UPPERCASE)
+
+
+##  Creating Variables in Python
+
+
+## Example: Creating Different Types of Variables
+
+python
+# Integer variable
+age = 20
+
+# Float variable
+height = 5.9
+
+# String variable
+name = "Arun"
+
+# Boolean variable
+is_student = True
+
+# List variable
+hobbies = ["reading", "coding", "gaming"]
+
+# Dictionary variable
+user = {
+    "name": "Arun",
+    "age": 21,
+    "is_student": True
+}
+
+# Print all variables
+print(name, age, height, is_student)
+print("Hobbies:", hobbies)
+print("User Info:", user)
+
+
+## Output:
+
+Arun 21 5.9 True
+Hobbies: ['reading', 'coding', 'gaming']
+User Info: {'name': 'Arun', 'age': 21, 'is_student': True}
+
+## Quick Notes
+
+* No need to use `var`, `int`, `string`, etc.
+* Use descriptive names (`name`, `hobbies`) instead of `x`, `a1`.
+* Python uses dynamic typing — you can change the type later.
+
 
 
 
