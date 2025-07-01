@@ -331,5 +331,64 @@ print(keyword.kwlist)
 
 
 
+##  Declaring Variables in Python
+
+In Python, variables are used to store data values. You **do not need to declare the data type** explicitly—Python automatically detects the type based on the value assigned.
+
+##  Syntax
+
+python
+variable_name = value
+
+
+* `variable_name`: the name you give to the variable.
+* `=`: the assignment operator.
+* `value`: the data you want to store.
+
+## Example
+
+python
+# Integer
+age = 25
+
+# String
+name = "Alice"
+
+# Float
+price = 19.99
+
+# Boolean
+is_active = True
+```
+
+## Variable Naming Rules
+
+* Must start with a **letter** or **underscore** (`_`)
+* Can contain **letters**, **numbers**, and **underscores**
+* **Case-sensitive** (`name` and `Name` are different)
+* **Should not use reserved keywords** (like `class`, `if`, `for`)
+
+## Example with Type Check
+
+python
+x = 10
+print(type(x))  # <class 'int'>
+
+x = "Python"
+print(type(x))  # <class 'str'>
+
+
+## Best Practices
+
+* Use **meaningful names** (`user_name` instead of `x`)
+* Use **snake\_case** for variable names (e.g., `total_amount`)
+* Use **lowercase letters** (constants can be in UPPERCASE)
+
+
+
+
+
+
+
 
 
