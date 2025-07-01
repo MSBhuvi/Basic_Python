@@ -27,12 +27,12 @@ print ("hello world")
 
                                 
 
- ## 🧠 Python Variables
+ ##  Python Variables
 
  In Python, **variables** are used to store data that can be referenced and manipulated later in your code.
  You don’t need to declare the type—Python is **dynamically typed**, so it figures it out for you.
 
- 📝 Creating Variables
+  Creating Variables
 
   python
       name = "Arun"       # string
@@ -43,21 +43,21 @@ print ("hello world")
 Python uses `=` to assign values.
 
 
- 📌 Rules for Variable Names
+  Rules for Variable Names
 
 * Must start with a **letter** or an **underscore (`_`)**
 *  Cannot start with a number
 * Can contain letters, numbers, and underscores
 * Are **case-sensitive** (`Name` and `name` are different)
 
- ✅ Valid:
+  Valid:
 
    python
          user_name = "Bob"
           _age = 30
 
 
- ❌ Invalid:
+  Invalid:
 
  python
  2name = "Error"     # starts with number
@@ -66,7 +66,7 @@ Python uses `=` to assign values.
 
 
 
- 🔄 Reassigning & Dynamic Typing
+  Reassigning & Dynamic Typing
 
  Variables can change type at runtime:
 
@@ -75,7 +75,7 @@ Python uses `=` to assign values.
   x = 42       # int
   x = "hello"  # now it's a string
 
-📚 Variable Types (Built-in)
+ Variable Types (Built-in)
 
 | Type    | Example                  |
 | ------- | ------------------------ |
@@ -95,7 +95,7 @@ Best Practices
 
 
 
-📘 *Learn more in the* [Python Docs – Variables](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
+ *Learn more in the* [Python Docs – Variables](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
 
 Let me know if you’d like a visual example, code sandbox, or interactive notebook!
 
