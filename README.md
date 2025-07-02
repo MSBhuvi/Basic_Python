@@ -465,12 +465,74 @@ Arun
 21
 Name: Arun
 Age: 21
-My name is Arun and I am 21 years old.
+My name is Arun and I am 21 years old. 
 
 
 ---
 
 
+---
+
+## Python Data Types – Quick Overview 
+
+Python has several **built-in data types** used to store values of different kinds:
+
+## Basic Data Types:
+
+| Type      | Example          | Description                | 
+| --------- | ---------------- | -------------------------- | 
+| `int`     | `x = 10`         | Integer numbers            |
+| `float`   | `y = 3.14`       | Decimal numbers            | 
+| `complex` | `z = 2 + 3j`     | Complex numbers            | 
+| `bool`    | `flag = True`    | Boolean (`True` / `False`) |
+| `str`     | `name = "Alice"` | Text or string values      |
+
+## Collection Data Types: 
+
+| Type    | Example                        | Description                   |
+| ------- | ------------------------------ | ----------------------------- |
+| `list`  | `fruits = ["apple", "banana"]` | Ordered, mutable collection   |
+| `tuple` | `coords = (10, 20)`            | Ordered, immutable collection |
+| `set`   | `ids = {1, 2, 3}`              | Unordered, unique values      |
+| `dict`  | `person = {"name": "Bob"}`     | Key-value pairs               |
+
+## Type Checking
+
+python
+print(type(10))        # <class 'int'>
+print(type("hello"))   # <class 'str'>
+
+
+## Type Conversion
+
+python
+int("5")     # → 5
+str(10)      # → "10" 
+list("abc")  # → ['a', 'b', 'c'] 
+
+---
+    
+
+
+
+
+
+
+
+
+
+      
+
+
+
+   
+
+    
+    
+
+
+
+    
 
 
 
