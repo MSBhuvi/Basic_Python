@@ -456,10 +456,9 @@ print("Age:", age)
 
 # Using f-string (Python 3.6+)
 print(f"My name is {name} and I am {age} years old.")
-```
+
 
 ## Output
-
 
 Arun
 21
@@ -512,6 +511,47 @@ list("abc")  # → ['a', 'b', 'c']
 
 ---
     
+Sure! Here's a **short and GitHub-friendly** explanation of the **comma operator in Python**:
+
+---
+
+## Comma in Python – Not an Operator!
+
+In Python, the **comma (`,`) is *not* an operator** like in C/C++.
+Instead, it's used to **create tuples** or **separate values** in function arguments, assignments, and loops.
+
+---
+
+## Usage Examples:
+
+python
+# Tuple creation
+a = 1, 2, 3
+print(type(a))  # <class 'tuple'>
+
+# Multiple assignment
+x, y = 10, 20
+
+# Function arguments
+def add(a, b):
+    return a + b
+
+result = add(5, 7)
+
+# Loop with multiple variables
+for i, val in enumerate(['a', 'b']):
+    print(i, val)
+
+
+---
+
+## Summary:
+
+* **Comma is a separator**, not an operator.
+* Often used to **create tuples** or **unpack variables**.
+
+---
+
 
 
 
