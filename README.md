@@ -552,6 +552,40 @@ for i, val in enumerate(['a', 'b']):
 
 ---
 
+---
+
+## Printing Text Using Comma in Python
+
+In Python, commas inside `print()` **separate multiple values** and insert a **space** between them.
+
+---
+
+### ✅ Example:
+
+python
+# Printing multiple values using comma
+name = "Arun"
+age = 25
+
+print("Name:", name, "| Age:", age)
+
+
+**Output:**
+
+
+Name: Arun | Age: 25
+
+
+---
+
+## Notes:
+
+* Commas let you print different types (like strings + numbers) without converting them.
+* Adds automatic spaces between items.
+
+---
+
+
 
 
 
