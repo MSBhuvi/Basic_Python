@@ -649,7 +649,29 @@ Use `sep` and `end` to format output **without string concatenation**!
 
 ---
 
+## Example: Using `sep` in `print()` (Short Version)
 
+python
+print("Hello", "World", "2025", sep=" - ")
+
+
+**Output:**
+
+Hello - World - 2025
+
+The `sep` parameter sets the **separator** between printed values.
+
+## Example: Using `end` Parameter in `print()`
+
+python
+print("Hello", end=" ")
+print("World!")
+
+**Output:**
+
+Hello World!
+
+ `end=" "` keeps the cursor on the same line with a space instead of a newline.
 
 
 
