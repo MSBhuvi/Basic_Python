@@ -585,6 +585,70 @@ Name: Arun | Age: 25
 
 ---
 
+---
+
+## Printing with `sep` and `end` in Python
+
+Python’s print() function has two useful optional parameters:
+
+* **`sep`**: Defines the **separator** between multiple items.
+* **`end`**: Defines what to print at the **end** of the output (default is a newline `\n`).
+
+---
+
+## `sep` – Separator Between Values
+
+By default, print() separates multiple arguments with a space.
+
+python
+print("Python", "is", "awesome")  
+# Output: Python is awesome
+
+
+You can change the separator using `sep`:
+
+python
+print("Python", "is", "awesome", sep="-")
+# Output: Python-is-awesome
+
+
+---
+
+## `end` – What to Print at the End
+
+By default, `print()` ends with a newline (`\n`):
+
+python
+print("Hello")
+print("World")
+# Output:
+# Hello
+# World
+
+
+You can change this using `end`:
+
+python
+print("Hello", end=" ")
+print("World")
+# Output: Hello World
+
+---
+
+## Combine `sep` and `end`
+
+python
+print("2025", "07", "04", sep="-", end="!\n")
+# Output: 2025-07-04!
+
+---
+
+## Tip
+
+Use `sep` and `end` to format output **without string concatenation**!
+
+---
+
 
 
 
