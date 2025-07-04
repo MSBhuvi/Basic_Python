@@ -875,6 +875,64 @@ string in Python.
 
 🔹 Triple quotes preserve line breaks and spacing.
 
+---
+
+## Type Casting in Python
+
+**Type casting** means converting a value from one data type to another (e.g., `int` to `float`, `str` to `int`, etc.).
+
+Python provides built-in functions for casting:
+
+---
+
+## Common Type Casting Functions
+
+| Function  | Converts to... |
+| --------- | -------------- |
+| `int()`   | Integer        |
+| `float()` | Floating point |
+| `str()`   | String         |
+| `bool()`  | Boolean        |
+
+---
+
+## Examples
+
+python
+# String to int
+num = int("10")         # 10
+
+# Float to int (truncates)
+x = int(3.7)            # 3
+
+# Int to float
+y = float(5)            # 5.0
+
+# Number to string
+text = str(123)         # "123"
+
+# Non-zero to True
+val = bool(1)           # True
+
+---
+
+## Note
+
+Type casting may raise errors if the conversion is invalid:
+
+python
+int("abc")  #  ValueError
+
+---
+
+## Use Cases
+
+* Accepting user input (`input()` returns a string)
+* Mathematical operations
+* Data processing and validation
+
+---
+
 
 
 
