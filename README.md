@@ -747,7 +747,32 @@ f-Strings are:
 
 ---
 
+## Short Example: Using `f-string` in Python
 
+python
+name = "Arun"
+print(f"Hello, {name}!")
+
+**Output:**
+
+Hello, Arun!
+
+🔹 f-strings let you insert variables directly into strings using `{}`.
+
+## Rounding to Two Decimal Places in Python (Shortly)
+
+Use the built-in `round()` function:
+
+python
+num = 3.14159
+rounded = round(num, 2)
+print(rounded)
+
+**Output:**
+
+3.14
+
+ round(number, 2) rounds the number to 2 decimal places.
 
 
 
