@@ -774,7 +774,71 @@ print(rounded)
 
  round(number, 2) rounds the number to 2 decimal places.
 
+---
 
+## Comments in Python
+
+**Comments** are notes in your code to explain what it does. They are **ignored by the Python interpreter**.
+
+---
+
+## Single-Line Comments
+
+Use the `#` symbol:
+
+python
+# This is a single-line comment
+print("Hello, World!")  # This prints a message
+
+---
+
+## Multi-Line Comments (Workaround)
+
+Python doesn’t have official multi-line comment syntax, but you can use multiple `#`:
+
+python
+# This is a comment
+# that spans multiple lines
+print("Done")
+
+Or use a **docstring** (not recommended unless for documentation):
+
+python
+"""
+This is a multi-line string
+which can act like a comment
+"""
+
+>  Note: Triple-quoted strings are not true comments — they are stored as string objects if not assigned.
+
+---
+
+## Best Practices
+
+* Use comments to explain **why**, not **what** (if code is self-explanatory)
+* Keep them **short and clear**
+* Update comments when code changes
+
+---
+
+## Why Are Comments Used in Python? 
+
+**Comments** are used to:
+
+* Explain code for better readability
+* Make the code easier to understand and maintain
+* Help other developers (and your future self) know **why** something was done
+* Temporarily disable code during debugging
+
+ Comments are ignored by the Python interpreter.
+
+##  Example: Comments in Python
+
+python
+# This prints a welcome message
+print("Welcome to Python!")
+
+🔹 The `#` makes everything after it a comment (ignored by Python).
 
 
 
