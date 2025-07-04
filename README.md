@@ -840,6 +840,41 @@ print("Welcome to Python!")
 
 🔹 The `#` makes everything after it a comment (ignored by Python).
 
+---
+
+## Printing a String Multiple Times in Python
+
+Use the `*` operator to repeat a string:
+
+python
+print("Hello " * 3)
+
+**Output:**
+
+Hello Hello Hello 
+
+ The `*` operator repeats the string **n** times.
+
+---
+
+## Example: Multi-line String in Python
+
+You can use triple quotes (`'''` or `"""`) to create a multi-line string:
+
+python
+message = """Hello,
+This is a multi-line
+string in Python."""
+print(message)
+
+**Output:**
+
+Hello,
+This is a multi-line
+string in Python.
+
+🔹 Triple quotes preserve line breaks and spacing.
+
 
 
 
