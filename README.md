@@ -933,6 +933,62 @@ int("abc")  #  ValueError
 
 ---
 
+---
+
+## Calculating Total Salary in Python
+
+## **Theory**
+
+To calculate total salary, you typically use:
+
+total_salary = basic_salary + allowances - deductions
+
+Where:
+
+* **basic\_salary**: Fixed base salary
+* **allowances**: Extra income (e.g., HRA, travel, etc.)
+* **deductions**: Amounts subtracted (e.g., tax, PF, etc.)
+
+You can use variables and simple arithmetic to compute this.
+
+---
+
+## **Python Code Example**
+
+python
+# Define salary components
+basic_salary = 25000
+allowances = 5000
+deductions = 3000
+
+# Calculate total salary
+total_salary = basic_salary + allowances - deductions
+
+# Display the result
+print(f"Total Salary: ₹{total_salary}")
+
+---
+
+### 📌 Output:
+
+Total Salary: ₹27000
+
+---
+
+## Tip
+
+You can also use `input()` to take user input for dynamic salary calculation:
+
+python
+basic = float(input("Enter basic salary: "))
+allow = float(input("Enter allowances: "))
+deduct = float(input("Enter deductions: "))
+
+total = basic + allow - deduct
+print(f"Total Salary: ₹{total}")
+
+---
+
 
 
 
