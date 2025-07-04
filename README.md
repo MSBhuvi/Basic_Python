@@ -673,6 +673,80 @@ Hello World!
 
  `end=" "` keeps the cursor on the same line with a space instead of a newline.
 
+---
+
+## Printing with **f-Strings** in Python
+
+**f-Strings** (formatted string literals) make it easy to include variables and expressions inside strings using `{}`.
+Available from **Python 3.6+**.
+
+---
+
+## Basic Syntax
+
+python
+name = "Arun"
+print(f"Hello, {name}!")
+
+**Output:**
+
+
+Hello, Arun!
+
+
+ Just add an `f` before the opening quote, and put variables or expressions inside `{}`.
+
+---
+
+## With Expressions
+
+python
+a = 5
+b = 10
+print(f"The sum of {a} and {b} is {a + b}")
+
+**Output:**
+
+
+The sum of 5 and 10 is 15
+
+---
+
+## Formatting Numbers
+
+python
+pi = 3.14159
+print(f"Value of pi: {pi:.2f}")
+
+**Output:**
+
+
+Value of pi: 3.14
+
+---
+
+## Example with Date
+
+python
+from datetime import datetime
+today = datetime.now()
+print(f"Today's date: {today:%Y-%m-%d}")
+
+**Output:**
+
+Today's date: 2025-07-04
+
+---
+
+## Clean & Readable
+
+f-Strings are:
+
+* Faster and more readable than `format()` or `%` formatting
+* Great for inline calculations and formatting
+
+---
+
 
 
 
