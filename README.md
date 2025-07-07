@@ -935,7 +935,7 @@ int("abc")  #  ValueError
 
 ---
 
-## Calculating Total Salary in Python
+## Example: A  ( Calculating Total Salary in Python )
 
 ## **Theory**
 
@@ -989,14 +989,39 @@ print(f"Total Salary: ₹{total}")
 
 ---
 
+Example: B  coverting string to float
 
+The following code converts Ivan's salary from a string to float;otherwise, the program generates an error.
+Arun's wage is not enclosed with a double quote;therefore, it is already a number and doesn't need to be covrerted
 
+calculator.py
 
+salary_ivan=3200
+salary_Arun="2800"
+total_salary=salary_ivan+float(salary_Arun)
+print("Total salaries:$",total_salary)
 
+OUTPUT
+
+Total salaries:$6000.0
+
+---
+Example: C  coverting string to Int
+
+To calculate the age difference between two individuals, you must covert the second age to int type because the second age is a string
       
+calculate.py 
 
+age1=22
+age2"34"
+age_difference=int(age2)-age1
+print("Age Difference:",age_difference)
 
+OUTPUT
 
+Age Difference: 12
+
+---
    
 
     
