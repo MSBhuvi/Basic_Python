@@ -1305,6 +1305,109 @@ print("      * * * *")
 
 ---
 
+---
+
+## Python Operators – Quick Guide
+
+**Operators** are special symbols used to perform **operations** on variables and values.
+
+---
+
+## 1. **Arithmetic Operators**
+
+Used for basic math.
+
+| Operator | Description        | Example        |
+| -------- | ----------------- | -------------- |
+| +      | Addition            | `3 + 2 = 5`    |
+| -      | Subtraction         | `5 - 1 = 4`    |
+| *      | Multiplication      | `4 * 2 = 8`    |
+| /      | Division            | `10 / 2 = 5.0` |
+| //     | Floor Division      | `10 // 3 = 3`  |
+| %      | Modulus (Remainder) | `10 % 3 = 1`   |
+| **     | Exponentiation      | `2 ** 3 = 8`   |
+
+---
+
+## 2. **Comparison Operators**
+
+Compare two values and return `True` or `False`.
+
+| Operator | Description      | Example         |
+| -------- | ---------------- | --------------- |
+| `==`     | Equal to         | `5 == 5 → True` |
+| `!=`     | Not equal to     | `3 != 4 → True` |
+| `>`      | Greater than     | `7 > 2 → True`  |
+| `<`      | Less than        | `2 < 5 → True`  |
+| `>=`     | Greater or equal | `5 >= 5 → True` |
+| `<=`     | Less or equal    | `4 <= 6 → True` |
+
+---
+
+### 🔹 3. **Assignment Operators**
+
+Used to assign values.
+
+| Operator | Meaning             | Example              |
+| -------- | ------------------- | -------------------- |
+| `=`      | Assign              | `x = 10`             |
+| `+=`     | Add and assign      | `x += 5 → x = x + 5` |
+| `-=`     | Subtract and assign | `x -= 3 → x = x - 3` |
+| `*=`     | Multiply and assign | `x *= 2`             |
+| `/=`     | Divide and assign   | `x /= 4`             |
+
+---
+
+### 🔹 4. **Logical Operators**
+
+Used to combine conditions.
+
+| Operator | Description           | Example            |
+| -------- | --------------------- | ------------------ |
+| `and`    | True if both are true | `x > 5 and x < 10` |
+| `or`     | True if one is true   | `x < 3 or x > 8`   |
+| `not`    | Reverses the result   | `not(x == 5)`      |
+
+---
+
+### 🔹 5. **Identity Operators**
+
+Used to compare object identity.
+
+| Operator | Meaning             | Example      |
+| -------- | ------------------- | ------------ |
+| `is`     | True if same object | `x is y`     |
+| `is not` | True if not same    | `x is not y` |
+
+---
+
+### 🔹 6. **Membership Operators**
+
+Check if a value exists in a sequence.
+
+| Operator | Meaning              | Example              |
+| -------- | -------------------- | -------------------- |
+| `in`     | Value exists         | `"a" in "apple"`     |
+| `not in` | Value does not exist | `"z" not in "apple"` |
+
+---
+
+### ✅ Example Code:
+
+```python
+x = 10
+y = 5
+
+print(x + y)       # Arithmetic
+print(x > y)       # Comparison
+print(x == 10 and y == 5)  # Logical
+x += 2             # Assignment
+print(x)
+```
+
+---
+
+Let me know if you want a **cheat sheet** or **interactive quiz** too!
 
 
 
