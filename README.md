@@ -1023,6 +1023,290 @@ Age Difference: 12
 
 ---
    
+---
+
+## Escape Sequences in Python
+
+**Escape sequences** are special characters used in strings to represent characters that are otherwise difficult to include directly, like newlines, tabs, quotes, etc.
+
+They begin with a **backslash (`\`)**.
+
+---
+
+## Common Escape Sequences:
+
+| Escape | Meaning          | Example Output                |
+| ------ | ---------------- | ----------------------------- |
+| `\n`   | New line         | Splits the text to a new line |
+| `\t`   | Tab (horizontal) | Adds a tab space              |
+| `\\`   | Backslash        | Prints `\` character          |
+| `\'`   | Single quote     | Prints `'` in a string        |
+| `\"`   | Double quote     | Prints `"` in a string        |
+
+---
+
+## Example:
+
+python
+# Using escape sequences
+print("Hello\nWorld")     # New line
+print("Python\tRocks")    # Tab space
+print("He said: \"Yes\"") # Double quotes inside string
+print('It\'s awesome!')   # Single quote inside string
+
+---
+
+## Output:
+
+
+Hello
+World
+Python	Rocks
+He said: "Yes"
+It's awesome!
+
+---
+
+## Tip:
+
+You can also use **raw strings** (`r"..."`) to **ignore escape sequences**.
+
+python
+print(r"This is a raw string:\nNo new line here.")
+
+🧾 Output:
+
+This is a raw string:\nNo new line here.
+
+---
+
+---
+
+## Escape Sequence Quiz (Python)
+
+Test your knowledge of escape sequences!
+**Choose the correct output or fill in the blanks.**
+
+---
+
+## 1. What will this code print?
+
+python
+print("Hello\nPython")
+
+
+A. Hello Python
+B. Hello\nPython
+C. Hello
+        Python
+D. Error
+
+> ✅ **Answer:** C
+
+---
+
+## 2. Which escape sequence is used to insert a tab space?
+
+A. \\n
+B. \t
+C. \n
+D. \b
+
+> ✅ **Answer:** B
+
+---
+
+ QUIZ: 2
+ 
+## 1. Fill in the blank to print this output:
+
+He said: "Hello"
+
+python
+print("He said: _______")
+
+> ✅ **Answer:** "He said: \"Hello\""
+
+---
+
+## 2. What is the output of this code?
+
+python
+print('It\'s easy!')
+
+
+A. It's easy!
+B. Its easy!
+C. It\'s easy!
+D. Error
+
+> ✅ **Answer:** A
+
+---
+
+---
+
+## Escape Sequence Quiz – *Total Weight in a Lift*
+
+**Scenario:**
+You're building a Python program to display the **total weight of 3 people** inside a lift.
+Use **escape sequences** to format the output nicely.
+
+---
+
+## Task:
+
+Fill in the blanks ( ___ ) to complete the program.
+
+python
+# Lift Weight Calculator
+
+person1 = 65.5
+person2 = 72.0
+person3 = 58.3
+
+# Calculate total weight
+total_weight = person1 + person2 + person3
+
+# Print the result using escape sequences
+print("Lift Weight Report\n")
+print("Person 1:\t", person1, "kg")
+print("Person 2:\t", person2, "kg")
+print("Person 3:\t", person3, "kg")
+print("\nTotal:\t\t", total_weight, "kg")
+
+---
+
+## Quiz Questions:
+
+1. What does \n do in the print statement?
+
+   * A. Adds a new line
+   * B. Adds a tab
+   * C. Prints a slash
+   * D. None of the above
+
+2. What is the purpose of \t in this code?
+
+   * A. New paragraph
+   * B. Adds a tab space for alignment
+   * C. Skips the line
+   * D. None
+
+3. What is the **total weight** calculated in the program?
+
+---
+
+## Expected Output:
+
+Lift Weight Report
+
+Person 1:	 65.5 kg
+Person 2:	 72.0 kg
+Person 3:	 58.3 kg
+
+Total:		 195.8 kg
+
+---
+
+---
+
+## Escape Sequence Exercise – *Printing Variable Values & Types*
+
+** Objective:**
+Practice using **escape sequences** (`\n`, `\t`) along with `print()`, `type()`, and variables.
+
+---
+
+###  Instructions:
+
+1. Declare 3 different variables with different data types.
+2. Use print() to:
+
+   * Show each variable's **value**
+   * Show its **type**
+   * Use **\n for new lines** and **\t for indentation**
+3. Try to format the output to look clean and readable.
+
+---
+
+###  Sample Code (Complete This):
+
+python
+# Variable Declarations
+name = "Alice"
+age = 25
+height = 5.4
+
+# Print values and types using escape sequences
+print("Variable Info:\n")
+
+print("Name:\t", name)
+print("Type:\t", type(name), "\n")
+
+print("Age:\t", age)
+print("Type:\t", type(age), "\n")
+
+print("Height:\t", height)
+print("Type:\t", type(height), "\n")
+
+---
+
+## Expected Output:
+
+Variable Info:
+
+Name:	 Alice
+Type:	 <class 'str'>
+
+Age:	 25
+Type:	 <class 'int'>
+
+Height:	 5.4
+Type:	 <class 'float'>
+
+---
+
+## Challenge Yourself:
+
+* Try with bool and list types too.
+* Use f-strings instead of commas in print() for cleaner formatting.
+
+---
+
+## Exercise: Print a Shape Using Escape Sequences
+
+** Task:**
+Use **\n** (new line) and **\t** (tab) escape sequences to print the following triangle shape:
+
+	    *
+	   * *
+	  * * *
+	 * * * *
+
+---
+
+## Starter Code:
+
+python
+# Print triangle using escape sequences
+print("\t\t\t*")
+print("\t\t  * *")
+print("\t    * * *")
+print("      * * * *")
+
+---
+
+## Instructions:
+
+* Use \t for horizontal spacing (tab).
+* Use \n if printing all lines together in a single `print()` statement.
+* Try modifying the shape or adding more lines!
+
+---
+
+
+
 
     
     
