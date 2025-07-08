@@ -1392,9 +1392,9 @@ Check if a value exists in a sequence.
 
 ---
 
-### ✅ Example Code:
+## Example Code:
 
-```python
+python
 x = 10
 y = 5
 
@@ -1403,25 +1403,365 @@ print(x > y)       # Comparison
 print(x == 10 and y == 5)  # Logical
 x += 2             # Assignment
 print(x)
-```
 
 ---
 
-Let me know if you want a **cheat sheet** or **interactive quiz** too!
+# Example for Arithmetic Operators in Python
 
+a = 10
+b = 3
 
+# Addition
+print("Addition:", a + b)
 
+# Subtraction
+print("Subtraction:", a - b)
+
+# Multiplication
+print("Multiplication:", a * b)
+
+# Division
+print("Division:", a / b)
+
+# Floor Division
+print("Floor Division:", a // b)
+
+# Modulus
+print("Modulus:", a % b)
+
+# Exponentiation
+print("Exponentiation:", a ** b)
+
+## Modulus (`%`) in Python – Short Explanation
+
+The **modulus operator %** returns the **remainder** of a division.
+
+#### Example:
+
+python
+print(10 % 3)  # Output: 1
+
+ Here, 10 ÷ 3 = 3 with a **remainder of 1** → so 10 % 3 gives 1.
+
+## Use Cases:
+
+* Check if a number is even/odd:
+
+  python
+  print(7 % 2)  # Output: 1 → odd
+  print(8 % 2)  # Output: 0 → even
+  
+* Looping in cycles, e.g., `i % 4` cycles 0,1,2,3,0,...
+* Useful in clock-based logic or round-robin systems.
+
+---
+
+python
+# Modulus Example
+
+a = 17
+b = 5
+
+result = a % b
+print("Remainder:", result)  # Output: 2
+
+ **Explanation:** 17 ÷ 5 = 3 remainder **2**, so 17 % 5 = 2.
+
+---
+
+## Floor Division in Python (`//`) 
+
+**Floor division** returns the **quotient** of a division, **rounded down** to the nearest whole number.
+
+## Syntax:
+
+python
+a // b
+
+## Example:
+
+---
+
+# Floor Division Example
+
+a = 17
+b = 5
+
+result = a // b
+print("Quotient:", result)  # Output: 3
+
+ **Explanation:**
+17 ÷ 5 = 3.4 → floor division 17 // 5 = 3 (rounds down).
+
+Common use: Get whole number part of a division without decimals.
+
+---
     
+## Assignment Operator in Python — Short & GitHub-Friendly
+
+The **assignment operator `=`** is used to **assign a value** to a variable.
+
+## Example:
+
+# Assignment Operator Example
+
+x = 10  # Assigns 10 to variable x
+print("x =", x)
+
+
+## Other compound assignment operators:
+
+python
+x += 5   # x = x + 5
+x -= 2   # x = x - 2
+x *= 3   # x = x * 3
+x /= 2   # x = x / 2
+
+ **Tip:** Assignment operators help update variable values concisely.
     
+---
+
+# Assignment Operator Example
+
+x = 5
+print("x =", x)  # Output: x = 5
+
+ This assigns the value 5 to the variable x.
+
+---
+
+##  Using `+` and `+=` with Strings in Python 
+
+####  `+` Operator → **Concatenates** strings (joins them)
+
+greeting = "Hello, " + "World!"
+print(greeting)  # Output: Hello, World!
+
+## `+=` Operator → **Appends** to an existing string
+
+message = "Hello"
+message += ", Python!"
+print(message)  # Output: Hello, Python!
+
+ **Tip:**
+
+* + creates a **new string**
+* += updates the **existing string variable**
+
+ Useful for building strings in loops or step-by-step.
+
+---
+Example for concatenate strings using "+"
+
+# String Concatenation using +
+
+first = "Hello"
+second = "World"
+result = first + " " + second
+print(result)  # Output: Hello World
+
+---
+
+ Here's a short example for **concatenating strings using `+=`**:
+
+# String Concatenation using +=
+
+text = "Hello"
+text += " World"
+print(text)  # Output: Hello World
+
+ += adds " World" to the existing text string.
+
+---
+
+## Comparison Operators in Python 
+
+**Comparison operators** are used to **compare values**. They return either True or False.
+
+## List of Comparison Operators:
+
+| Operator | Meaning               | Example           |
+| -------- | --------------------- | ----------------- |
+| `==`     | Equal to              | `5 == 5` → `True` |
+| `!=`     | Not equal to          | `5 != 3` → `True` |
+| `>`      | Greater than          | `7 > 2` → `True`  |
+| `<`      | Less than             | `3 < 4` → `True`  |
+| `>=`     | Greater than or equal | `5 >= 5` → `True` |
+| `<=`     | Less than or equal    | `2 <= 3` → `True` |
+
+## Example:
+
+a = 10
+b = 5
+
+print(a > b)   # True
+print(a == b)  # False
+
+ **Tip:** Commonly used in `if` statements, loops, and filters.
+
+---
+
+ A short example for **comparison operators** in Python:
 
 
+# Comparison Operator Example
 
-    
+a = 7
+b = 5
+
+print(a > b)   # True
+print(a == b)  # False
+
+ Compares values and returns True or False.
+
+---
+
+## Logical Operators in Python 
+
+**Logical operators** are used to combine conditional statements. They return True or False.
+
+## Types of Logical Operators:
+
+| Operator | Description                      | Example                    |
+| -------- | -------------------------------- | -------------------------- |
+| `and`    | True if **both** are True        | `True and False` → `False` |
+| `or`     | True if **at least one** is True | `True or False` → `True`   |
+| `not`    | Reverses the result              | `not True` → `False`       |
+
+## Example:
+
+python
+a = 5
+b = 10
+
+print(a > 2 and b > 8)   # True
+print(a < 3 or b == 10)  # True
+print(not(a == b))       # True
 
 
+**Tip:** Used in if statements to combine multiple conditions.
 
+---
 
+  A short example for **logical operators** in Python:
 
+python
+# Logical Operator Example
 
+x = 10
+y = 5
 
+print(x > 5 and y < 10)   # True
+print(x < 5 or y == 5)    # True
+print(not(x == y))        # True
 
+ Combines conditions using and, or, not.
+
+---
+
+## Identity Operators in Python 
+
+**Identity operators** are used to **compare the memory location** of two objects.
+
+## Types of Identity Operators:
+
+| Operator | Description                                      | Example      |
+| -------- | ------------------------------------------------ | ------------ |
+| `is`     | Returns `True` if **both refer to same object**  | `a is b`     |
+| `is not` | Returns `True` if **they are different objects** | `a is not b` |
+
+## Example:
+
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)      # True  (same object)
+print(a is c)      # False (different object with same value)
+print(a is not c)  # True
+
+ **Note:** Use == to compare **values**, is to compare **identity**.
+
+---
+
+A short example for **identity operators** in Python:
+
+# Identity Operator Example
+
+a = [1, 2]
+b = a
+c = [1, 2]
+
+print(a is b)      # True
+print(a is c)      # False
+print(a is not c)  # True
+
+ `is` checks if both refer to the **same object in memory**.
+
+---
+
+## Membership Operators in Python 
+
+**Membership operators** are used to **check if a value exists** in a sequence (like a list, string, tuple, etc).
+
+## Types of Membership Operators:
+
+| Operator | Description                                | Example                       |
+| -------- | ------------------------------------------ | ----------------------------- |
+| `in`     | Returns `True` if value is present         | `"a" in "apple"` → `True`     |
+| `not in` | Returns `True` if value is **not** present | `3 not in [1, 2, 4]` → `True` |
+
+## Example:
+
+fruits = ["apple", "banana", "cherry"]
+
+print("apple" in fruits)     # True
+print("grape" not in fruits) # True
+
+ **Tip:** Great for searching in strings, lists, and other collections.
+
+ ---
+
+ A short quiz on **arithmetic operators**:
+
+---
+
+## **Quiz:**
+
+What will be the output of the following code?
+
+x = 8
+y = 3
+print(x % y + x // y)
+
+**A.** 3
+**B.** 5
+**C.** 4
+**D.** 6
+
+---
+
+ A short quiz on the **assignment operator**:
+
+---
+
+## **Quiz: Assignment Operator**
+
+**Question:**
+What will be the output of the following code?
+
+x = 10
+x += 5
+print(x)
+
+**A.** 10
+**B.** 5
+**C.** 15
+**D.** Error
+
+---
+
+ **Answer:** C. 15
+**Explanation:** `x += 5` means `x = x + 5`, so `10 + 5 = 15`.
+
+--- 
