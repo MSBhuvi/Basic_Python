@@ -1765,3 +1765,326 @@ print(x)
 **Explanation:** `x += 5` means `x = x + 5`, so `10 + 5 = 15`.
 
 --- 
+
+Sure! Here's a short quiz for comparison operators in Python:
+
+---
+
+** Quiz: Comparison Operator in Python**
+
+**Question:**
+What will be the output of the following code?
+
+x = 10
+y = 20
+print(x > y)
+
+**A.** True
+**B.** False
+**C.** 10
+**D.** 20
+
+---
+
+*Correct Answer:* **B. False**
+**Explanation:** `10 > 20` is not true, so it returns `False`.
+
+---
+
+
+## **Quiz: Identity Operator in Python**
+
+**Question:**
+What will be the output of the following code?
+
+x = [1, 2, 3]
+y = x
+z = [1, 2, 3]
+
+print(x is y)
+print(x is z)
+
+**Options:**
+A) `True` `True`
+B) `True` `False`
+C) `False` `True`
+D) `False` `False`
+
+---
+
+**Answer:**  **B) True False**
+
+**Explanation:**
+
+* `x is y` → `True` because `y` refers to the same object as `x`.
+* `x is z` → `False` because `z` is a new list with the same values, but it's a different object in memory.
+
+---
+
+##  User Input & Strings in Python
+
+## Getting User Input
+
+Python uses the input() function to get data from the user.
+
+name = input("Enter your name: ")
+print("Hello,", name)
+
+* input() always returns data as a **string**.
+
+## Working with Strings
+
+You can use **string methods** to manipulate text:
+
+text = "  python is FUN!  "
+
+print(text.strip())       # Removes leading/trailing spaces
+print(text.lower())       # Converts to lowercase
+print(text.upper())       # Converts to uppercase
+print(text.replace("FUN", "awesome"))  # Replaces words
+
+## Concatenating Strings
+
+Join strings using `+` or `f-strings`:
+
+first = "Hello"
+last = "World"
+
+print(first + " " + last)        # Using +
+print(f"{first} {last}!")        # Using f-string
+
+---
+
+ **Tip:** Always convert input to the needed type (e.g., `int(input())` for numbers).
+
+---
+
+## **User Input in Python (Short)**
+
+Python uses the `input()` function to take input from the user.
+
+name = input("Enter your name: ")
+print("Hello,", name)
+
+* input() **always returns a string**.
+* You can convert input to other types using `int()`, `float()`, etc.
+
+age = int(input("Enter your age: "))
+print("You will be", age + 1, "next year.")
+
+---
+
+Example: To create a triangle using user input:
+
+rows = int(input("Enter number of rows: "))
+
+for i in range(1, rows + 1):
+    print("*" * i)
+
+## Sample Output:
+
+If user enters `5`:
+
+*
+**
+***
+****
+*****
+
+This prints a **right-angled triangle** of stars (`*`).
+
+Example: to calculate **total weight** using user input:
+
+item1 = float(input("Enter weight of item 1 (kg): "))
+item2 = float(input("Enter weight of item 2 (kg): "))
+total = item1 + item2
+
+print("Total weight:", total, "kg")
+
+## Sample Output:
+
+Enter weight of item 1 (kg): 2.5  
+Enter weight of item 2 (kg): 3.2  
+Total weight: 5.7 kg
+
+Example: to check the **variable types** using `type()` in Python:
+
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+print(type(name))      # <class 'str'>
+print(type(age))       # <class 'int'>
+print(type(height))    # <class 'float'>
+print(type(is_student))# <class 'bool'>
+
+## Output:
+
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+
+---
+
+Example for converting strings to integers using user input:
+
+# Get user input
+num = input("Enter a number: ")
+
+# Convert string to integer
+num = int(num)
+
+# Display result
+print("You entered:", num)
+
+ **Note:** `input()` always returns a string. Use `int()` to convert it to an integer.
+
+---
+
+explanation of **strings and substrings** in Python:
+
+---
+
+## Strings in Python
+
+* A **string** is a sequence of characters enclosed in quotes (' ' or " ").
+* Example:
+
+  message = "Hello, Python!"
+  
+## Substrings
+
+* A **substring** is a part of a string.
+
+* You can extract substrings using **slicing**:
+
+  text = "Programming"
+  print(text[0:6])  # Output: Progra
+  
+* You can also **check** if a substring exists:
+
+  "gram" in text   # True
+  
+---
+
+**Tip:** Python strings are **zero-indexed**.
+
+ **Test it out**:
+
+word = "education"
+print(word[1:4])         # duc
+print("cat" in word)     # True
+
+---
+
+ Explanation of **string indexing** in Python:
+
+---
+
+## String Index in Python
+
+* **Indexing** lets you access individual characters in a string.
+* Index starts at **0** (zero-based indexing).
+
+text = "Python"
+print(text[0])  # P
+print(text[5])  # n
+
+* You can also use **negative indexes** to count from the end:
+
+print(text[-1])  # n (last character)
+print(text[-3])  # h
+
+---
+
+ **Tip:** Use indexes to loop, slice, or manipulate characters in strings.
+
+A short example for **string index**:
+
+name = "Python"
+print(name[0])   # Output: P
+print(name[3])   # Output: h
+print(name[-1])  # Output: n (last character)
+
+ This shows how to access characters using positive and negative indexes.
+
+  A explanation of **substrings** in Python:
+
+---
+
+## Substrings in Python
+
+* A **substring** is a part of a string.
+
+* Use **slicing** to get substrings:
+
+  text = "HelloWorld"
+  print(text[0:5])  # Output: Hello
+  
+* Check if a substring exists:
+
+  print("World" in text)  # True
+
+---
+
+ **Syntax:** string[start:end]
+(start index is included, end index is excluded)
+
+ **Try this:**
+
+word = "education"
+print(word[2:5])       # uca
+print("cat" in word)   # True
+
+---
+
+ explanation of using **operators with strings** in Python:
+
+---
+
+## Using Operators with Strings
+
+Python allows some operators to work with strings:
+
+## `+` (Concatenation)
+
+* Joins two strings:
+
+  first = "Hello"
+  second = "World"
+  result = first + " " + second
+  print(result)  # Output: Hello World
+  
+## `*` (Repetition)
+
+* Repeats a string multiple times:
+
+  text = "Hi "
+  print(text * 3)  # Output: Hi Hi Hi 
+
+## Comparison Operators
+
+* Strings can be compared using `==`, `!=`, `<`, `>`, etc.
+
+  print("apple" == "apple")  # True
+  print("a" < "b")           # True
+  
+---
+
+ **Tip:** Use `+` to build strings, and `*` to repeat patterns.
+
+---
+
+short example for **comparing strings**:
+
+a = "apple"
+b = "banana"
+
+print(a == b)   # False
+print(a < b)    # True (because "apple" comes before "banana")
+
+ You can use `==`, `!=`, `<`, `>`, `<=`, `>=` to compare strings alphabetically.
+
+
