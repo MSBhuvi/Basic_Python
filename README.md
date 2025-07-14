@@ -2137,3 +2137,437 @@ contains     = "tho" in s1           # True
 Drop this snippet into your repo’s **docs** or **README.md** for an instant, developer‑friendly explanation of string comparison in Python.
 
 ---
+
+## Example: Find Substring Within a String (Python)
+
+text = "Python programming is fun"
+if "programming" in text:
+    print("Found!")
+
+**Output:**
+
+Found!
+
+Use `in` to check if a substring exists.
+Case-sensitive by default. Use `.lower()` or `.casefold()` for case-insensitive checks.
+
+---
+
+## String Functions in Python 
+
+Python provides many **built-in string methods**. Here's a quick reference:
+
+| Function                        | Description              | Example                                |
+| ------------------------------- | ------------------------ | -------------------------------------- |
+| len()                           | Returns string length    | len("Hello") → 5                     |
+| .lower() / .upper()             | Changes case             | "Hi".lower() → "hi"                  |
+| .strip()                      | Removes spaces           | "  text  ".strip() → "text"          |
+| .replace()                    | Replaces part of string  | "a-b".replace("-", ":") → "a:b"      |
+| .split()                      | Splits into list         | "a,b,c".split(",") → ['a', 'b', 'c'] |
+| .find()                       | Finds index of substring | "hello".find("l") → 2                |
+| .count()                      | Counts substring         | "hello".count("l") → 2               |
+| .startswith() / .endswith() | Checks start/end         | "file.txt".endswith(".txt") → True"  |
+
+## Example:
+
+message = " Hello Python! "
+print(message.strip().lower().replace("python", "world"))
+
+**Output:**
+
+hello world!
+
+>  Most string methods **don't change the original string** — they return a **new string**.
+> You can chain methods like `.strip().lower()` for clean processing.
+
+---
+
+## Example: Using String Functions in Python (GitHub-Friendly)
+
+name = "  Hello World!  "
+
+# Clean and format the string
+cleaned = name.strip().lower().replace("world", "Python")
+print(cleaned)
+
+**Output:**
+
+hello python!
+
+ **Used functions:**
+
+* .strip() → removes spaces
+* .lower() → converts to lowercase
+* .replace() → replaces text
+
+---
+
+##Example: Boolean Function in Python (GitHub-Friendly)
+
+def is_even(n):
+    return n % 2 == 0
+
+print(is_even(4))   # True
+print(is_even(7))   # False
+
+ **Explanation**:
+
+* is_even() returns a **boolean** (True or False)
+* You can use it in conditions like if is_even(x): ...
+
+---
+ Here's a **short quiz** on **string manipulation** in Python:
+---
+
+## **Quiz: String Manipulation**
+
+**Question:**
+What will be the output of the following code?
+
+text = " Hello, Python! "
+result = text.strip().replace("Python", "World").upper()
+print(result)
+
+**Options:**
+A) HELLO, PYTHON!
+B) HELLO, WORLD!
+C) HELLO, WORLD!
+D) Hello, World!
+
+---
+
+** Answer:** **B) HELLO, WORLD!**
+
+**Explanation:**
+
+* strip() removes spaces
+* replace("Python", "World") replaces the word
+* upper() converts to uppercase
+
+---
+
+Sure! Here's a **short quiz** on **string indexing** in Python:
+
+---
+
+## **Quiz: String Indexing**
+
+**Question:**
+What will be the output of the following code?
+
+text = "Python"
+print(text[3])
+
+**Options:**
+A) h
+B) t
+C) o
+D) n
+
+---
+
+** Answer:** **A) h**
+
+**Explanation:**
+
+* Indexing starts at 0
+* text[3] gives the **4th character**, which is 'h' in "Python"
+
+---
+
+Sure! Here's a **short explanation** of **conditional statements** in Python:
+
+---
+
+## Conditional Statements in Python 
+
+Conditional statements let your program make decisions based on conditions.
+
+## Syntax:
+
+if condition:
+    # code runs if condition is True
+elif another_condition:
+    # runs if previous is False and this is True
+else:
+    # runs if all conditions are False
+
+## Example:
+
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are an adult.")
+elif age > 12:
+    print("You are a teenager.")
+else:
+    print("You are a child.")
+
+---
+
+
+Sure! Here's a **short explanation** of the **`if` statement** in Python:
+
+---
+
+# **if Statement **
+
+The if statement is used to run code **only if a condition is True**.
+
+## Syntax:
+
+if condition:
+    # code to run if condition is True
+
+## Example:
+
+age = 20
+
+if age >= 18:
+    print("You can vote.")
+
+**Output:**
+You can vote.
+
+---
+
+Use if to **control program flow** based on conditions. Let me know if you need elif and else too!
+
+---
+
+ a **short explanation** of the **if-else statement** in Python:
+
+---
+
+## **if-else Statement **
+
+Use if-else to run **one block if a condition is True**, and another if it's False.
+
+## Syntax:
+
+if condition:
+    # runs if condition is True
+else:
+    # runs if condition is False
+
+### 🔍 Example:
+
+age = 16
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+**Output:**
+Minor
+
+---
+
+ **short explanation** of **if-elif-else** in Python:
+
+---
+
+## **if-elif-else Statement **
+
+Use if-elif-else to check **multiple conditions** in order.
+
+## Syntax:
+
+if condition1:
+    # runs if condition1 is True
+elif condition2:
+    # runs if condition2 is True
+else:
+    # runs if none are True
+
+## Example:
+
+marks = 75
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+
+
+**Output:**
+Grade B
+
+---
+
+It checks top-down and runs the **first True block only**.
+
+---
+
+Sure! Here's a **short quiz** on the **`if` statement** in Python:
+
+---
+
+## **Quiz: if Statement**
+
+**Question:**
+What will be the output of this code?
+
+x = 10
+
+if x > 5:
+    print("High")
+
+**Options:**
+A) High
+B) Low
+C) Error
+D) Nothing is printed
+
+---
+
+** Answer:** **A) High**
+
+**Explanation:**
+The condition x > 5 is True, so "High" is printed.
+
+---
+
+ Here's a **short quiz** on the **`if-elif` statement**:
+
+---
+
+## **Quiz: if-elif Statement**
+
+**Question:**
+What will be the output of this code?
+
+num = 0
+
+if num > 0:
+    print("Positive")
+elif num == 0:
+    print("Zero")
+
+**Options:**
+A) Positive
+B) Zero
+C) Negative
+D) Nothing is printed
+
+---
+
+**✅ Answer:** **B) Zero**
+
+**Explanation:**
+
+* num > 0 is False
+* num == 0 is True, so "Zero" is printed.
+
+---
+
+Sure! Here's a **short quiz** on **logical operators** in Python:
+
+---
+
+## **Quiz: Logical Operator**
+
+**Question:**
+What will be the output of the following code?
+
+x = 10
+y = 5
+
+if x > 5 and y < 10:
+    print("Condition True")
+else:
+    print("Condition False")
+
+**Options:**
+A) Condition True
+B) Condition False
+C) Error
+D) No output
+
+---
+
+** Answer:** **A) Condition True**
+
+**Explanation:**
+
+* x > 5 → True
+* y < 10 → True
+* True and True → True
+
+---
+
+**short explanation** of **loop statements** in Python:
+
+---
+
+## **Loop Statements in Python **
+
+Loops are used to **repeat a block of code** multiple times.
+
+---
+
+## `for` Loop
+
+Used to iterate over a sequence (like list, string, range).
+
+for i in range(5):
+    print(i)
+
+**Output:**
+0 1 2 3 4
+
+---
+
+## `while` Loop
+
+Repeats **as long as** the condition is True.
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+**Output:**
+0 1 2 3 4
+
+---
+
+Use break to stop a loop early, and continue to skip an iteration.
+
+---
+
+ **short explanation** of the **`while` loop** in Python:
+
+---
+
+## **while Loop (Short)**
+
+The while loop runs a block of code **as long as a condition is `True`**.
+
+## Syntax:
+
+while condition:
+    # code to repeat
+
+## Example:
+
+i = 1
+while i <= 3:
+    print(i)
+    i += 1
+
+**Output:**
+1 2 3
+
+---
+
+Use while when you don't know how many times to repeat in advance.
+
+---
+
+
+
+
