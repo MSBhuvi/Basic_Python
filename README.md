@@ -2087,4 +2087,53 @@ print(a < b)    # True (because "apple" comes before "banana")
 
  You can use `==`, `!=`, `<`, `>`, `<=`, `>=` to compare strings alphabetically.
 
+---
+## Comparing Strings in Python
 
+> **Quick guide, perfect for dropping into a GitHub README.**
+
+| Comparison   | What it checks                                               | Example                                       | Result |
+| ------------ | ------------------------------------------------------------ | --------------------------------------------- | ------ |
+| == / !=  | Exact equality / inequality                                  | "cat" == "cat"                                    | True   |
+| < > <= >=  | Lexicographic (alphabetical) order, Unicode‐code‑point based | "apple" < "banana"                          | True |
+| casefold() | Case‑insensitive equality (better than `lower()`)            | "straße".casefold() == "STRASSE".casefold() | True |
+| in         | Substring membership                                         | "py" in "python"                            | True |
+
+# basic equality
+if user_input == secret_word:
+    print("Match!")
+
+# alphabetical sorting
+words = ["Banana", "apple", "Cherry"]
+print(sorted(words, key=str.casefold))  # ['apple', 'Banana', 'Cherry']
+
+# case‑insensitive compare
+if name.casefold() == "alice":
+    ...
+
+# natural‑order compare (e.g., file2 < file10)
+import natsort
+from natsort import natsorted
+files = ["file10.txt", "file2.txt"]
+print(natsorted(files))  # ['file2.txt', 'file10.txt']
+
+>  **Remember**
+>
+> * `==` compares *contents*; `is` compares *object identity* (don’t use `is` for strings unless you really mean it).
+> * Lexicographic order is Unicode‑based; for locale‑aware sorting (e.g., accented letters), use `locale.strxfrm` or a library like `PyICU`.
+
+---
+
+## Cheat‑sheet for quick reference
+
+s1, s2 = "Python", "python"
+
+equal        = s1 == s2              # False
+ci_equal     = s1.casefold() == s2.casefold()  # True
+before_after = s1 < s2               # True ('P' < 'p' in Unicode)
+contains     = "tho" in s1           # True
+
+
+Drop this snippet into your repo’s **docs** or **README.md** for an instant, developer‑friendly explanation of string comparison in Python.
+
+---
