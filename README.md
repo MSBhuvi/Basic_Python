@@ -2568,6 +2568,75 @@ Use while when you don't know how many times to repeat in advance.
 
 ---
 
+ Short example using `while True` in Python:
 
+# Infinite loop until user types 'exit'
+while True:
+    user_input = input("Type something (or 'exit' to quit): ")
+    if user_input.lower() == 'exit':
+        print("Exiting the loop. Goodbye!")
+        break
+    else:
+        print("You typed:", user_input)
+
+## Explanation:
+
+* while True: creates an infinite loop.
+* The break statement is used to exit the loop when the user types "exit".
+
+This format is beginner-friendly and commonly used for input-based loops.
+
+---
+
+ **short example** of the break statement in Python 
+
+# Example: Break statement in a loop
+
+while True:
+    user_input = input("Type 'exit' to stop: ")
+    if user_input == "exit":
+        break
+    print("You typed:", user_input)
+
+print("Loop ended.")
+
+### 🔹 What it does:
+
+* Keeps asking for input.
+* Breaks the loop if the user types "exit".
+
+---
+
+ A **short example** of the `continue` statement in Python
+
+# Example: Continue statement in a loop
+
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skip number 3
+    print("Number:", num)
+
+## What it does:
+
+* Loops from 1 to 5.
+* Skips printing number 3 using continue.
+
+  ---
+
+  A **short example** of the `pass` statement in Python 
+
+# Example: Pass statement in a loop
+
+for num in range(5):
+    if num == 2:
+        pass  # Placeholder for future code
+    print("Number:", num)
+
+## What it does:
+
+* Loops through 0 to 4.
+* When num is 2, it does nothing and continues — pass acts as a placeholder.
+
+---
 
 
