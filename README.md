@@ -2639,4 +2639,107 @@ for num in range(5):
 
 ---
 
+## `for` Loop in Python — *Short Explanation*
+
+A **for loop** is used to **repeat a block of code** a certain number of times, usually when working with **sequences** like lists, strings, or ranges.
+
+## Basic Syntax:
+
+for variable in sequence:
+    # code to repeat
+
+## Example 1: Loop through a list
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+## Example 2: Loop using `range()`
+
+for i in range(5):
+    print(i)
+
+This prints: 0 1 2 3 4
+
+## Key Points:
+
+* The loop **automatically moves** to the next item.
+* Stops when all items are covered.
+* Use range() to repeat something **fixed number of times**.
+
+---
+
+Example of the range() function with **one parameter** in a `for` loop:
+
+for i in range(5):
+    print(i)
+
+### Output:
+
+0
+1
+2
+3
+4
+
+ **Explanation**:
+range(5) generates numbers from `0` to `4` (not including 5).
+
+---
+
+Example of `range()` with **two parameters**:
+
+for i in range(2, 6):
+    print(i)
+
+## Output 
+
+2
+3
+4
+5
+
+**Explanation**:
+range(2, 6) starts from 2 and goes up to 5 (6 is not included).
+
+---
+
+An example of `range()` with **three parameters**:
+
+for i in range(1, 10, 2):
+    print(i)
+
+### Output:
+
+1
+3
+5
+7
+9
+
+ **Explanation**:
+range(start, stop, step)
+This means: start at 1, go up to (but not include) 10, increment by 2.
+
+---
+
+Sure! Here's a simple **quiz question** for the `while` loop:
+
+---
+
+## **Quiz: What will be the output of the following code?**
+
+x = 0
+while x < 3:
+    print(x)
+    x += 1
+
+**A.** 0 1 2 3
+**B.** 0 1 2
+**C.** 1 2 3
+**D.** Infinite loop
+
+**Correct Answer:** **B. 0 1 2**
+
+---
 
