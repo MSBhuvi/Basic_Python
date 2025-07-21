@@ -3325,7 +3325,50 @@ print(fruits)          # []
 
 ---
 
+ **removing an element by its position** using the `pop()` method:
 
+# List of fruits
+fruits = ["apple", "banana", "cherry", "date"]
+
+# Remove the element at index 2 (which is "cherry")
+removed_item = fruits.pop(2)
+
+print("Removed:", removed_item)
+print("Updated list:", fruits)
+
+## Output:
+
+Removed: cherry  
+Updated list: ['apple', 'banana', 'date']
+
+ pop(index) removes the item at the given position and returns it.
+ If the index doesn't exist, it will raise an IndexError.
+
+---
+
+ **removing all elements from a list** using the `.clear()` method:
+
+# Example: Removing all elements from a list
+
+# Initial list
+numbers = [10, 20, 30, 40, 50]
+
+# Clear all elements from the list
+numbers.clear()
+
+# Output the result
+print("List after clearing:", numbers)
+
+## Output:
+
+List after clearing: []
+
+## Notes:
+
+* .clear() removes **all elements** from the list.
+* The list still exists but becomes **empty**.
+
+---
 
 
 
