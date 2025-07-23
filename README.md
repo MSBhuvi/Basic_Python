@@ -3661,8 +3661,432 @@ print(product)
 
 ---
 
+Example of removing elements from a dictionary in Python:
 
+## Example: Remove an element from a dictionary by key
 
+# Sample dictionary
+product_prices = {
+    "apple": 30,
+    "banana": 10,
+    "orange": 25
+}
+
+# Remove the item with key 'banana'
+removed_price = product_prices.pop("banana")
+
+# Print the removed value and updated dictionary
+print("Removed price:", removed_price)
+print("Updated dictionary:", product_prices)
+
+## Output:
+
+Removed price: 10
+Updated dictionary: {'apple': 30, 'orange': 25}
+
+---
+
+## Other Methods to Remove Elements:
+
+1. **Using `del` keyword:**
+
+del product_prices["apple"]
+
+2. **Using `clear()` to remove all items:**
+
+product_prices.clear()
+
+---
+
+A quiz on finding the number of elements in a dictionary:
+
+---
+
+## **Python Dictionary Quiz – Number of Elements**
+
+## Question:
+
+students = {
+    "Alice": 85,
+    "Bob": 90,
+    "Charlie": 78,
+    "David": 92
+}
+
+print(len(students))
+
+## What will be the output?
+
+A) 3
+B) 4
+C) 5
+D) Error
+
+---
+
+## Answer:
+
+**B) 4**
+
+>  len() returns the number of **key-value pairs** in the dictionary.
+
+---
+
+A **short quiz** on printing dictionary elements:
+
+---
+
+## Quiz:
+
+person = {"name": "John", "age": 25}
+
+for k, v in person.items():
+    print(k, ":", v)
+
+What is the output?
+
+A) name age
+B) John 25
+C)
+
+name : John  
+age : 25
+
+D) Error
+
+---
+
+## Answer:
+
+C
+
+---
+
+Explanation of how to **declare a function** in Python:
+
+---
+
+## Declaring a Function in Python
+
+def greet():
+    print("Hello, world!")
+
+## Explanation:
+
+* def → keyword to define a function
+* greet() → function name (can be any valid name)
+* : → colon to start the function block
+* print(...) → code that runs when the function is called
+
+## Call the function:
+
+greet()
+
+---
+
+A example of a function that stores and displays **contact data**:
+
+---
+
+## Example: Contact Data Function
+
+def contact_info():
+    contact = {
+        "name": "Arun Kumar",
+        "phone": "+91-9876543210",
+        "email": "arun@example.com",
+        "city": "Chennai"
+    }
+
+    for key, value in contact.items():
+        print(key.title() + ":", value)
+
+# Call the function
+contact_info()
+
+---
+
+## Output:
+
+Name: Arun Kumar  
+Phone: +91-9876543210  
+Email: arun@example.com  
+City: Chennai
+
+---
+
+ A explanation of a **function without arguments** in Python 
+
+---
+
+## Function Without Arguments
+
+A function **without arguments** means it doesn't take any input when called.
+
+## Example:
+
+def say_hello():
+    print("Hello, welcome!")
+
+# Call the function
+say_hello()
+
+## Explanation:
+
+* def say_hello(): → defines a function with **no parameters**.
+* print(...) → code that runs when you call the function.
+* say_hello() → calling the function to execute it.
+
+---
+
+A **simple example** of a **function with one argument** 
+
+---
+
+A simple example of a function with one argument
+
+---
+
+## Function with One Argument
+
+def greet(name):
+    print("Hello,", name)
+
+# Call the function with an argument
+greet("Arun")
+
+## Output:
+
+Hello, Arun
+
+---
+
+A **function with two arguments** in Python:
+
+---
+
+## Example: Function with Two Arguments
+
+def add_numbers(a, b):
+    result = a + b
+    print("Sum:", result)
+
+# Call the function
+add_numbers(5, 3)
+
+---
+
+## Explanation:
+
+* a and b are **parameters** (inputs).
+* add_numbers(5, 3) passes **two arguments**.
+* It prints: Sum: 8
+
+---
+
+A **function that returns a value** in Python:
+
+---
+
+## Function That Returns a Value
+
+A function can **return a result** using the return keyword.
+
+## Example:
+
+def square(num):
+    return num * num
+
+# Store the result
+result = square(4)
+print("Square is:", result)
+
+---
+
+## Explanation:
+
+* return num * num → sends the result back to where the function was called.
+* result = square(4) → stores the returned value.
+* Output: Square is: 16
+
+---
+
+A quiz based on a simple **function calculator** in Python:
+
+---
+
+## **Python Function Quiz – Calculator**
+
+## Question:
+
+def calculator(a, b, op):
+    if op == "+":
+        return a + b
+    elif op == "-":
+        return a - b
+    else:
+        return "Invalid operation"
+
+print(calculator(10, 5, "-"))
+
+## What is the output?
+
+A) 5
+B) 15
+C) -5
+D) Invalid operation
+
+---
+
+## Answer:
+
+**A) 5**
+
+>  The function returns 10 - 5 which is 5.
+
+---
+
+Sure! Here's a **short and clear explanation** of **exceptions** in Python:
+
+---
+
+## What are Exceptions?
+
+**Exceptions** are errors that happen during program execution.
+Python stops the program unless the error is **handled**.
+
+---
+
+## Example:
+
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except ValueError:
+    print("Please enter a valid number.")
+
+---
+
+## Keywords:
+
+* try: Code that might cause an error
+* except: Handles the error
+* ZeroDivisionError, ValueError: Common exception types
+
+---
+
+A explanation **syntax errors** in Python 
+
+---
+
+## What is a Syntax Error?
+
+A **syntax error** happens when the Python code is **not written correctly** — it breaks the rules of the language.
+
+---
+
+## Example of Syntax Error:
+
+# Missing colon (:) after if statement
+if 5 > 3
+    print("Hello")
+
+## Output:
+
+SyntaxError: expected ':'
+
+---
+
+## Fix:
+
+if 5 > 3:
+    print("Hello")
+
+---
+
+## Tip:
+
+Syntax errors happen **before** the code runs. Python won’t run the program until the syntax is correct.
+
+---
+
+A explanation of **runtime errors** in Python 
+
+---
+
+## What is a Runtime Error?
+
+A **runtime error** happens **while the program is running** — the syntax is correct, but something goes wrong during execution.
+
+---
+
+## Example of Runtime Error:
+
+num = int(input("Enter a number: "))
+print(10 / num)
+
+## If user enters `0`:
+
+ZeroDivisionError: division by zero
+
+---
+
+## Common Runtime Errors:
+
+* ZeroDivisionError` → Dividing by 0
+* ValueError → Wrong data type
+* IndexError → List index out of range
+* TypeError → Invalid operation on wrong types
+
+---
+
+## Fix with Try-Except:
+
+try:
+    print(10 / int(input("Enter a number: ")))
+except ZeroDivisionError:
+    print("Can't divide by zero!")
+
+---
+
+A explanation** of **logical errors** in Python 
+
+---
+
+## What is a Logical Error?
+
+A **logical error** happens when the program **runs without crashing**, but the **output is wrong** due to a mistake in logic.
+
+---
+
+## Example of Logical Error:
+
+def calculate_area(length, width):
+    return length + width  # ❌ wrong logic (should be *)
+
+# Expected: 20, but gives 9
+print("Area:", calculate_area(4, 5))
+
+## Output:
+
+Area: 9
+
+---
+
+## Correct Logic:
+
+def calculate_area(length, width):
+    return length * width  # ✔️ correct logic
+
+---
+
+## Tip:
+
+Logical errors are the **hardest to find** because there’s **no error message** — you must **test and debug** your code carefully.
+
+---
 
 
 
