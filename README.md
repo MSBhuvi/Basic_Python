@@ -4088,6 +4088,111 @@ Logical errors are the **hardest to find** because there’s **no error message*
 
 ---
 
+A explanation of a **logical error**
+
+---
+
+## Logical Error
+
+A **logical error** occurs when code runs without crashing but produces incorrect results. It means the **logic of the code is flawed**, not the syntax.
+
+ **Example (Python):**
+
+# Should calculate area of a rectangle
+def area(length, width):
+    return length + width  # Logical error: should be length * width
+
+ **Note:** Logical errors are hard to spot because the program runs normally — you must test outputs carefully!
+
+---
+
+ **division by zero** to demonstrate **error handling** with `try` / `except` 
+
+---
+
+## Example: Handling Division by Zero in Python
+
+def safe_divide(a, b):
+    try:
+        result = a / b
+        print(f"Result: {result}")
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero.")
+
+# Test cases
+safe_divide(10, 2)   # Output: Result: 5.0
+safe_divide(5, 0)    #  Output: Error: Cannot divide by zero.
+
+## What’s Happening:
+
+* `try`: runs code that might raise an error.
+* `except ZeroDivisionError`: catches the specific error and handles it gracefully.
+
+---
+
+ Example of a **TypeError** in Python — along with how to handle it:
+
+---
+
+## Example: TypeError in Python
+
+def add_numbers(a, b):
+    return a + b
+
+# This will cause a TypeError
+result = add_numbers(5, "3")  #  Can't add int and str
+
+## Output:
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+---
+
+## Handling the TypeError
+
+def add_numbers(a, b):
+    try:
+        return a + b
+    except TypeError:
+        print("Error: Both inputs must be numbers of the same type.")
+
+# Test cases
+print(add_numbers(5, 3))    #  Output: 8
+print(add_numbers(5, "3"))  #  Output: Error message
+
+---
+
+ Example of an **IndexError**, and how to handle it:
+
+---
+
+## Example: IndexError in Python
+
+fruits = ["apple", "banana", "cherry"]
+
+# This will raise an IndexError
+print(fruits[5])  #  Index 5 is out of range
+
+## Output:
+
+IndexError: list index out of range
+
+---
+
+## Handling the IndexError
+
+def get_fruit(index):
+    fruits = ["apple", "banana", "cherry"]
+    try:
+        return fruits[index]
+    except IndexError:
+        return "Error: Index out of range."
+
+# Test cases
+print(get_fruit(1))  #  Output: banana
+print(get_fruit(5))  #  Output: Error message
+
+---
 
 
 
