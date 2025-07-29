@@ -1,4 +1,6 @@
 # Basic_python
+                                                                          CHAPTER 1
+
 PYTHON VARIABLES AND DATA TYPES
     - HI Welcome! If you're just starting out python. This guide will give you a quick overview of the fundamentals. 
    -  Python is a powerfull,readable, and beginner-friendly programming language used in web development,AI,
@@ -8,7 +10,6 @@ PYTHON VARIABLES AND DATA TYPES
 Simple and readable: beginner friendly syntax
                    Stron community: Supportive and active developer base
                    Massive ecosystem: Thousands of libraries and frameworks
-
 
 Commom libraries
 
@@ -25,11 +26,9 @@ HELLO WORLD EXAMPLE
 python
 print ("hello world")
 
-
 ---
-                                
 
- ##  Python Variables
+##  Python Variables
 
  In Python, **variables** are used to store data that can be referenced and manipulated later in your code.
  You don’t need to declare the type—Python is **dynamically typed**, so it figures it out for you.
@@ -66,8 +65,6 @@ Python uses `=` to assign values.
   user-name = "Error" # hyphen not allowed
 
 
-
-
   Reassigning & Dynamic Typing
 
  Variables can change type at runtime:
@@ -99,7 +96,6 @@ Best Practices
 
  *Learn more in the* [Python Docs – Variables](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
 
-Let me know if you’d like a visual example, code sandbox, or interactive notebook!
 
 In python, variables are used to store the data that can be referenced
  What is a variable ?
@@ -113,13 +109,9 @@ PYTHON
  is_student = True
 
 
-
-
 #  Python Data Types
 
 Python is a dynamically typed language, which means you don't need to declare a variable's type explicitly. Python has several built-in data types categorized into different classes.
-
-
 
 ##  Basic Built-in Data Types
 
@@ -132,22 +124,17 @@ Python is a dynamically typed language, which means you don't need to declare a 
 | `complex` | Complex numbers                   | `z = 2 + 3j` |
 
 
-
 ###  Text Type
 
 | Type  | Description     | Example          |
 | ----- | --------------- | ---------------- |
 | `str` | Unicode strings | `name = "Alice"` |
 
-
-
 ###  Boolean Type
 
 | Type   | Description          | Example           |
 | ------ | -------------------- | ----------------- |
 | `bool` | True or False values | `is_valid = True` |
-
-
 
 ##  Collection Data Types
 
@@ -158,14 +145,12 @@ Python is a dynamically typed language, which means you don't need to declare a 
 python
 fruits = ["apple", "banana", "cherry"]
 
-
 ###  Tuple
 
 * Ordered, immutable, allows duplicates.
 
 python
 dimensions = (1920, 1080)
-
 
 ###  Set
 
@@ -174,16 +159,12 @@ dimensions = (1920, 1080)
 python
 colors = {"red", "green", "blue"}
 
-
 ###  Dictionary
 
 * Key-value pairs, unordered (Python 3.6+ preserves order).
 
 python
 person = {"name": "Alice", "age": 30}
-
-
-
 
 ##  Other Common Types
 
@@ -194,8 +175,6 @@ person = {"name": "Alice", "age": 30}
 | `bytearray` | Mutable byte sequences            | `arr = bytearray(5)` |
 | `range`     | Represents a range of numbers     | `range(0, 10)`       |
 
-
-
 ##  Type Checking
 
 Use the built-in `type()` and `isinstance()` functions:
@@ -203,8 +182,6 @@ Use the built-in `type()` and `isinstance()` functions:
 python
 type(42)              # <class 'int'>
 isinstance(42, int)   # True
-
-
 
 
 ##  Type Hints (Python 3.5+)
@@ -4194,6 +4171,238 @@ print(get_fruit(5))  #  Output: Error message
 
 ---
 
+## Example: Handling Multiple Exceptions
+
+try:
+    # This will raise a ZeroDivisionError
+    result = 10 / 0
+    
+    # This will raise a NameError
+    print(unknown_variable)
+
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+except NameError:
+    print("A variable used was not defined.")
+
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+else:
+    print("Everything worked fine!")
+
+finally:
+    print("This will always run.")
+
+## What’s Happening:
+
+* The code in the `try` block can raise different types of exceptions.
+* We handle specific exceptions (`ZeroDivisionError`, `NameError`) separately.
+* The `Exception` block is a generic catch-all for anything unexpected.
+* `finally` runs no matter what — useful for cleanup (e.g., closing files or DB connections).
+
+---
+
+## Example: Using `finally` with File Handling
+
+try:
+    file = open("example.txt", "r")
+    content = file.read()
+    print("File content:")
+    print(content)
+
+except FileNotFoundError:
+    print("The file was not found.")
+
+finally:
+    # This will run whether an exception occurred or not
+    print("Closing the file (if it was opened).")
+    try:
+        file.close()
+    except NameError:
+        pass  # file was never opened
+
+## Explanation:
+
+* The `try` block attempts to open and read from a file.
+* If the file doesn't exist, a `FileNotFoundError` is raised and handled.
+* The `finally` block always executes — even if an exception was raised — ensuring resources are cleaned up (like closing the file).
+
+---
+##  Quiz: Zero Division Exception
+
+**Question:**
+What will be the output of the following code?
+
+try:
+    result = 10 / 0
+    print("Result is:", result)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+**A.** `Result is: 0`
+**B.** `ZeroDivisionError`
+**C.** `You can't divide by zero!`
+**D.** `Program crashes`
+
+---
+
+**Correct Answer:**  **C.** `You can't divide by zero!`
+
+---
+
+## Quiz: IndexError Exception
+
+**Question:**
+What will be the output of the following code?
+
+my_list = [10, 20, 30]
+try:
+    print(my_list[5])
+except IndexError:
+    print("Index out of range!")
+
+**A.** `30`
+**B.** `None`
+**C.** `Index out of range!`
+**D.** `Error in list`
+
+---
+
+**Correct Answer:  **C.** `Index out of range!`
+
+---
+
+## Quiz: General Exception Handling
+
+**Question:**
+What will be the output of the following code?
+
+try:
+    number = int("abc")
+except:
+    print("Something went wrong!")
+
+**A.** `abc`
+**B.** `Something went wrong!`
+**C.** `ValueError`
+**D.** `Program crashes`
+
+---
+
+**Correct Answer:  **B.** `Something went wrong!`
+
+This is because the `int("abc")` raises a `ValueError`, and the `except` block catches it without specifying the error type.
+
+---
+
+## `import random` – Explanation
+
+The `random` module in Python is used to **generate random numbers** or make **random selections**.
+
+When you write:
+
+import random
+
+You are telling Python to **load the built-in `random` module**, so you can use its functions like:
+
+---
+
+## Common Uses:
+
+| Function               | Description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| `random.random()`      | Returns a random float between 0.0 and 1.0                   |
+| `random.randint(a, b)` | Returns a random **integer** between `a` and `b` (inclusive) |
+| `random.choice(list)`  | Randomly picks an element from a list                        |
+| `random.shuffle(list)` | Randomly rearranges the items in a list                      |
+| `random.uniform(a, b)` | Returns a random **float** between `a` and `b`               |
+
+---
+
+## Example:
+
+import random
+
+num = random.randint(1, 10)
+print("Random number:", num)
+
+This will print a **random number between 1 and 10**.
+
+---
+
+## `random.randrange()` – Explanation
+
+The `random.randrange()` function is used to **generate a random number from a specific range**.
+It works **like the `range()` function**, but picks one **randomly**.
+
+---
+
+## Syntax:
+
+random.randrange(start, stop, step)
+
+* `start` – (optional) the beginning of the range (default is 0)
+* `stop` – (required) the end of the range (not included)
+* `step` – (optional) the difference between numbers (default is 1)
+
+---
+
+## Example:
+
+import random
+
+num = random.randrange(1, 10)
+print(num)
+
+This will print a random number from **1 to 9** (10 is **not included**).
+
+---
+
+## Example with Step:
+
+random.randrange(0, 20, 2)
+
+This returns a random **even number** between 0 and 18.
+
+---
+
+A short example using `import random`:
+
+import random
+
+num = random.randint(1, 5)
+print("Random number:", num)
+
+🎲 **This prints a random number between 1 and 5.**
+
+---
+
+A example of  **dice roll simulator** using `random`:
+
+import random
+
+dice = random.randint(1, 6)
+print("🎲 You rolled:", dice)
+
+ **This simulates rolling a 6-sided dice.** Each run gives a number between **1 and 6**.
+
+---
+
+A example for rolling **two dice**:
+
+import random
+
+dice1 = random.randint(1, 6)
+dice2 = random.randint(1, 6)
+
+print("🎲 Dice 1:", dice1)
+print("🎲 Dice 2:", dice2)
+
+ This simulates rolling **two 6-sided dice**.
+
+ ---
 
 
 
