@@ -4404,11 +4404,406 @@ print("🎲 Dice 2:", dice2)
 
  ---
 
+Explanation of **date and time**
 
+---
 
+## What is the `datetime` module?
 
+It helps you:
 
+* Get the current date and time
+* Format date and time
+* Do date/time calculations (like yesterday/tomorrow)
+* Convert between strings and dates
 
+---
+
+## Importing the module:
+
+import datetime
+
+---
+
+## Getting current date and time:
+
+import datetime
+
+now = datetime.datetime.now()
+print("Current date and time:", now)
+
+Output:
+
+Current date and time: 2025-07-30 18:15:23.456789
+
+---
+
+## Get only date or time:
+
+today = datetime.date.today()
+print("Today's date:", today)
+
+time_now = datetime.datetime.now().time()
+print("Current time:", time_now)
+
+---
+
+## Creating a specific date or time:
+
+d = datetime.date(2025, 7, 30)
+print("Specific date:", d)
+
+t = datetime.time(14, 30, 0)
+print("Specific time:", t)
+
+---
+
+## Formatting date and time:
+
+now = datetime.datetime.now()
+
+formatted = now.strftime("%d-%m-%Y %H:%M:%S")
+print("Formatted:", formatted)
+
+**Common format codes:**
+
+* `%d` = Day
+* `%m` = Month
+* `%Y` = Year
+* `%H` = Hour
+* `%M` = Minute
+* `%S` = Second
+
+---
+
+## Doing date calculations:
+
+from datetime import timedelta, date
+
+today = date.today()
+tomorrow = today + timedelta(days=1)
+yesterday = today - timedelta(days=1)
+
+print("Tomorrow:", tomorrow)
+print("Yesterday:", yesterday)
+
+---
+
+## Converting string to date:
+
+from datetime import datetime
+
+date_str = "30-07-2025"
+date_obj = datetime.strptime(date_str, "%d-%m-%Y")
+
+print("Converted date:", date_obj)
+
+---
+
+ example for printing the **current date** in Python:
+
+import datetime
+
+# Get today's date
+today = datetime.date.today()
+
+# Print the current date
+print("Today's date is:", today)
+
+**Output:**
+
+Today's date is: 2025-07-30
+
+---
+
+A example to print a **selected date**:
+
+import datetime
+
+# Create a selected date (Year, Month, Day)
+selected_date = datetime.date(2025, 12, 25)
+
+print("Selected date is:", selected_date)
+
+**Output:**
+
+Selected date is: 2025-12-25
+
+You can change the values to any date you need.
+
+---
+
+A example of **updating a selected date** by **adding or subtracting days** using `timedelta`:
+
+import datetime
+
+# Original selected date
+selected_date = datetime.date(2025, 12, 25)
+print("Original date:", selected_date)
+
+# Add 5 days
+updated_date = selected_date + datetime.timedelta(days=5)
+print("Updated date (after 5 days):", updated_date)
+
+# Subtract 7 days
+earlier_date = selected_date - datetime.timedelta(days=7)
+print("Updated date (before 7 days):", earlier_date)
+
+**Output:**
+
+Original date: 2025-12-25
+Updated date (after 5 days): 2025-12-30
+Updated date (before 7 days): 2025-12-18
+
+This is useful for calculating deadlines, future events, or past dates. Let me know if you want to update months or years too (that needs a different approach).
+
+---
+
+A example of **formatting a date** using `strftime`:
+
+import datetime
+
+# Get today's date
+today = datetime.date.today()
+
+# Format the date as DD-MM-YYYY
+formatted_date = today.strftime("%d-%m-%Y")
+print("Formatted date:", formatted_date)
+
+**Output:**
+
+Formatted date: 30-07-2025
+
+---
+
+## Common format codes:
+
+* `%d` – Day (01 to 31)
+* `%m` – Month (01 to 12)
+* `%Y` – Year (4 digits)
+* `%B` – Full month name (e.g., July)
+* `%A` – Full weekday name (e.g., Wednesday)
+
+## Example using full names:
+
+formatted = today.strftime("%A, %d %B %Y")
+print("Formatted date:", formatted)
+
+**Output:**
+
+Wednesday, 30 July 2025
+
+---
+
+A example for formatting the current date** in Python:
+
+import datetime
+
+# Get the current date
+today = datetime.date.today()
+
+# Format as DD/MM/YYYY
+formatted_date = today.strftime("%d/%m/%Y")
+
+print("Current date (formatted):", formatted_date)
+
+**Output:**
+
+Current date (formatted): 30/07/2025
+
+---
+
+## Other examples of formats:
+
+# Format as Month Day, Year
+print(today.strftime("%B %d, %Y"))  # July 30, 2025
+
+# Format as YYYY-MM-DD
+print(today.strftime("%Y-%m-%d"))  # 2025-07-30
+
+---
+
+A example for formatting the current time in Python:
+
+import datetime
+
+# Get current time
+now = datetime.datetime.now()
+
+# Format time as HH:MM:SS
+formatted_time = now.strftime("%H:%M:%S")
+
+print("Current time (formatted):", formatted_time)
+
+**Output:**
+
+Current time (formatted): 18:45:10
+
+---
+
+## Common time format codes:
+
+* `%H` – Hour (00–23)
+* `%I` – Hour (01–12)
+* `%M` – Minute (00–59)
+* `%S` – Second (00–59)
+* `%p` – AM/PM
+
+---
+
+## Example with AM/PM format:
+
+formatted_time_am_pm = now.strftime("%I:%M %p")
+print("Time with AM/PM:", formatted_time_am_pm)
+
+**Output:**
+
+Time with AM/PM: 06:45 PM
+
+---
+
+A example to **format both current date and time** using `datetime` and `strftime`:
+
+import datetime
+
+# Get current date and time
+now = datetime.datetime.now()
+
+# Format date and time as: DD-MM-YYYY HH:MM:SS
+formatted = now.strftime("%d-%m-%Y %H:%M:%S")
+
+print("Formatted date and time:", formatted)
+
+**Output:**
+
+Formatted date and time: 30-07-2025 18:45:30
+
+---
+
+## Format codes used:
+
+* `%d` – Day
+* `%m` – Month
+* `%Y` – Year
+* `%H` – Hour (24-hour)
+* `%M` – Minute
+* `%S` – Second
+
+---
+
+ **Python quiz on date**:
+
+---
+
+## **Quiz:**
+
+What will be the output of the following code?
+
+import datetime
+
+d = datetime.date(2023, 1, 15)
+new_date = d + datetime.timedelta(days=10)
+print("Updated date:", new_date)
+
+## Options:
+
+A) 2023-01-25
+B) 2023-01-05
+C) 2023-01-10
+D) Error
+
+---
+
+A explanation of **files, directories, and the `os` module** in Python:
+
+---
+
+## **Files in Python**
+
+Files are used to **store data** permanently (like `.txt`, `.csv`, etc.).
+
+##  Basic file operations:
+
+# Open a file
+f = open("data.txt", "r")  # "r" = read, "w" = write, "a" = append
+
+# Read from file
+content = f.read()
+
+# Close the file
+f.close()
+
+---
+
+## **Directories (Folders)**
+
+A directory is a **container** for files or other folders.
+
+Example: `C:/Users/John/Documents/` is a directory path.
+
+---
+
+## **The `os` Module**
+
+Python's `os` module lets you **interact with the file system**.
+
+## Common `os` functions:
+
+import os
+
+# Get current directory
+print(os.getcwd())
+
+# List files and folders
+print(os.listdir())
+
+# Create a new folder
+os.mkdir("new_folder")
+
+# Check if a file or folder exists
+print(os.path.exists("data.txt"))
+
+---
+
+To **create directories** (folders) in Python, you can use the `os` module.
+
+---
+
+## Basic Example – Create one directory
+
+import os
+
+# Create a single directory
+os.mkdir("my_folder")
+
+This will create a folder named `my_folder` in the current directory.
+
+---
+
+## Create nested directories (multiple levels)
+
+import os
+
+# Create nested folders like parent/child/grandchild
+os.makedirs("parent/child/grandchild")
+
+`os.makedirs()` creates all intermediate folders if they don't exist.
+
+---
+
+## Check before creating
+
+import os
+
+folder_name = "my_folder"
+
+if not os.path.exists(folder_name):
+    os.mkdir(folder_name)
+    print("Folder created!")
+else:
+    print("Folder already exists.")
+
+---
 
 
 
