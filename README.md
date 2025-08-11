@@ -4805,7 +4805,504 @@ else:
 
 ---
 
+A example for creating a directory in Python using the `os` module:
 
+import os
 
+# Directory name
+directory_name = "MyFolder"
 
+# Create the directory
+os.mkdir(directory_name)
 
+print(f"Directory '{directory_name}' created successfully!")
+
+**Note:**
+
+* This will create the folder in the current working directory.
+* If the folder already exists, Python will throw a `FileExistsError`.
+* To create **nested directories**, use `os.makedirs()` instead.
+
+---
+
+A example for creating a **subdirectory** in Python:
+
+import os
+
+# Parent directory
+parent_dir = "MainFolder"
+
+# Subdirectory name
+sub_dir = "SubFolder"
+
+# Create the subdirectory path
+path = os.path.join(parent_dir, sub_dir)
+
+# Create subdirectory
+os.makedirs(path)
+
+print(f"Subdirectory '{sub_dir}' created inside '{parent_dir}' successfully!")
+
+**Notes:**
+
+* `os.makedirs()` will create both the parent folder and the subfolder if they don’t exist.
+* If the folders already exist, it will raise an error unless you pass `exist_ok=True` like:
+
+  os.makedirs(path, exist_ok=True)
+
+---
+
+A example to **check if a directory exists** in Python:
+
+import os
+
+# Directory name
+directory_name = "MyFolder"
+
+# Check existence
+if os.path.exists(directory_name):
+    print(f"Directory '{directory_name}' exists.")
+else:
+    print(f"Directory '{directory_name}' does not exist.")
+
+**Tip:**
+You can also check specifically if it’s a **directory** (not a file) using:
+
+os.path.isdir(directory_name)
+
+---
+
+ Removing directories depends on **whether the directory is empty or contains files**.
+
+---
+
+##  **Removing an Empty Directory**
+
+You can use `os.rmdir()` for an empty directory:
+
+import os
+
+os.rmdir("MyFolder")  # Deletes only if empty
+print("Empty directory removed.")
+
+ If the directory has files/subfolders, `os.rmdir()` will throw an error.
+
+---
+
+##  **Removing a Directory (with all contents)**
+
+You can use `shutil.rmtree()` to delete a directory and everything inside it:
+
+import shutil
+
+shutil.rmtree("MyFolder")  # Deletes folder even if it has files/subfolders
+print("Directory and its contents removed.")
+
+ **Be careful!** `shutil.rmtree()` is permanent and cannot be undone.
+
+---
+
+##  **Safe Deletion (Check before Removing)**
+
+It’s a good practice to check if the directory exists before removing:
+
+import os
+import shutil
+
+folder = "MyFolder"
+
+if os.path.exists(folder):
+    shutil.rmtree(folder)
+    print(f"Directory '{folder}' removed.")
+else:
+    print(f"Directory '{folder}' does not exist.")
+
+---
+
+A example for **removing an empty directory** in Python:
+
+import os
+
+# Directory name
+directory_name = "MyFolder"
+
+# Remove directory
+os.rmdir(directory_name)
+
+print(f"Directory '{directory_name}' removed successfully!")
+
+**Note:**
+
+* `os.rmdir()` works only if the directory is **empty**.
+* If it has files or subdirectories, you need to use `shutil.rmtree()` instead.
+
+Example for **removing a directory with files**:
+
+import shutil
+
+shutil.rmtree("MyFolder")
+print("Directory and its contents removed successfully!")
+
+---
+
+let’s go step-by-step through **creating and working with files** in Python.
+
+---
+
+##  **Opening / Creating a File**
+
+We use Python’s built-in `open()` function:
+
+# open(filename, mode)
+file = open("example.txt", "w")  # 'w' creates a new file or overwrites if exists
+file.write("Hello, this is my first file!\n")
+file.close()
+
+ **Modes** in `open()`:
+
+| Mode  | Meaning                                 |
+| ----- | --------------------------------------- |
+| "w" | Write (create new / overwrite)            |
+| "a" | Append (create if not exists, add to end) |
+| "r" | Read (must exist)                         |
+| "x" | Create new file (error if exists)         |
+| "b" | Binary mode (e.g., `"wb"`)                |
+| "t" | Text mode (default, e.g., `"wt"`)         |
+
+---
+
+##  **Writing to a File**
+
+with open("example.txt", "w") as file:
+    file.write("Line 1\n")
+    file.write("Line 2\n")
+
+ Using `with` automatically closes the file.
+
+---
+
+##  **Reading from a File**
+
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+Other ways to read:
+
+file.readline()   # Read one line
+file.readlines()  # Read all lines into a list
+
+---
+
+##  **Appending to a File**
+
+with open("example.txt", "a") as file:
+    file.write("This is an extra line.\n")
+
+---
+
+##  **Checking if a File Exists**
+
+import os
+
+if os.path.exists("example.txt"):
+    print("File exists!")
+else:
+    print("File not found!")
+
+---
+
+##  **Deleting a File**
+
+import os
+
+if os.path.exists("example.txt"):
+    os.remove("example.txt")
+    print("File deleted.")
+
+---
+
+A example to **create a file** in Python:
+
+# Create a new file (or overwrite if it exists)
+file = open("myfile.txt", "w")
+file.write("Hello! This is my new file.\n")
+file.close()
+
+print("File created successfully!")
+
+**Tip:**
+If you want to create a file only if it does **not** already exist, use the `"x"` mode:
+
+# Create file, error if it already exists
+file = open("myfile.txt", "x")
+file.write("This file is created only once!\n")
+file.close()
+
+---
+
+let’s break down **writing to an existing file** in Python.
+
+---
+
+##  **What “Writing” Means**
+
+When you **write** to a file in Python using "w" mode:
+
+* If the file exists → its contents are **erased** before writing new data.
+* If the file does not exist → it will be created automatically.
+
+---
+
+##  **Example – Overwriting an Existing File**
+
+# Writing to an existing file (overwrites old content)
+with open("myfile.txt", "w") as file:
+    file.write("This is new content.\n")
+    file.write("The old content is gone.\n")
+
+print("File updated successfully!")
+
+✅ `with` automatically closes the file after writing.
+
+---
+
+##  **If You Don’t Want to Erase Existing Content**
+
+Use "a" mode (**append**) instead:
+
+# Append new content without erasing
+with open("myfile.txt", "a") as file:
+    file.write("This is an extra line.\n")
+
+---
+
+##  **Key Modes Recap**
+
+| Mode  | Action                            |
+| ----- | --------------------------------- |
+| "w" | Overwrite (or create if not exists) |
+| "a" | Append to the end                   |
+| "x" | Create new file, error if exists    |
+
+---
+
+If you want, I can give you a **short table comparing "w" and "a" mode** so you can quickly remember which to use.
+
+---
+
+A simple example for **writing to a file** in Python:
+
+# Open the file in write mode
+with open("myfile.txt", "w") as file:
+    file.write("Hello, world!\n")
+    file.write("This is my first line in the file.\n")
+
+print("Data written to file successfully!")
+
+**Notes:**
+
+* "w" mode will create the file if it doesn’t exist.
+* If the file exists, `"w"` will **overwrite** its content.
+* Always use `with` to ensure the file closes automatically.
+
+---
+
+The breakdown for **reading an existing file** in Python.
+
+---
+
+##  Opening a File for Reading
+
+We use the open() function with "r" mode (**read mode**):
+
+with open("myfile.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+* "r" means **read only** (file must already exist).
+* If the file does **not** exist, Python raises a `FileNotFoundError`.
+
+---
+
+##  Reading Methods
+
+| Method        | Description                                   |
+| ------------- | --------------------------------------------- |
+| read()      | Reads the **entire file** as one string.        |
+| readline()  | Reads **one line** at a time.                   |
+| readlines() | Reads all lines and returns them as a **list**. |
+
+Example:
+
+with open("myfile.txt", "r") as file:
+    print(file.readline())   # First line
+    print(file.readline())   # Second line
+
+---
+
+##  Reading Line-by-Line in a Loop
+
+with open("myfile.txt", "r") as file:
+    for line in file:
+        print(line.strip())  # strip() removes extra spaces/newlines
+
+---
+
+##  Checking if a File Exists Before Reading
+
+import os
+if os.path.exists("myfile.txt"):
+    with open("myfile.txt", "r") as file:
+        print(file.read())
+else:
+    print("File not found!")
+
+---
+
+A example for **reading a file** in Python:
+
+# Open the file in read mode
+with open("myfile.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+**Notes:**
+
+* "r" means **read mode** — the file must already exist.
+* file.read() reads the **entire file** as one string.
+* Using with ensures the file closes automatically after reading.
+
+---
+
+A example of reading a file **line by line** using a loop with readline():
+
+# Open the file in read mode
+with open("myfile.txt", "r") as file:
+    line = file.readline()
+    while line:
+        print(line.strip())  # strip() removes extra spaces/newlines
+        line = file.readline()
+
+**How it works:**
+
+1. readline() reads **one line at a time**.
+2. The while line: loop keeps going until no more lines exist.
+3. strip() cleans up newline characters at the end of each line.
+
+---
+
+A example for **listing all files and directories** in Python:
+
+import os
+
+# Path to list (current directory)
+path = "."
+
+# List all files and directories
+items = os.listdir(path)
+
+print("Files and Directories in", path, ":")
+for item in items:
+    print(item)
+
+**Notes:**
+
+* os.listdir(path) returns a **list** of names (files + directories) in the given path.
+* "." means the **current directory**.
+* To check whether an item is a file or directory, you can use `os.path.isfile()` and `os.path.isdir()`.
+
+Example with filtering:
+
+for item in items:
+    if os.path.isfile(os.path.join(path, item)):
+        print(f"File: {item}")
+    else:
+        print(f"Directory: {item}")
+
+---
+
+A example to check the **current operating system** in Python:
+
+import os
+
+# Get the name of the operating system
+os_name = os.name
+print("OS Name:", os_name)
+
+# More detailed system info
+import platform
+print("System:", platform.system())
+print("Release:", platform.release())
+
+**Output example (Windows):**
+
+OS Name: nt
+System: Windows
+Release: 10
+
+**Notes:**
+
+* os.name returns short codes like `"nt"` (Windows), `"posix"` (Linux/Mac).
+* platform.system()` gives a readable OS name (`Windows`, `Linux`, `Darwin`).
+* `platform.release()` shows the OS version/release.
+
+---
+
+A **quiz question** for creating a map (dictionary) in Python:
+
+---
+
+**Quiz:**
+Which of the following is the correct way to create a dictionary (map) in Python that stores **country → capital** pairs?
+
+A)
+countries = ["India": "New Delhi", "France": "Paris"]
+
+B)
+countries = {"India": "New Delhi", "France": "Paris"}
+
+C)
+countries = ("India": "New Delhi", "France": "Paris")
+
+D)
+countries = {"India", "New Delhi", "France", "Paris"}
+
+---
+
+ **Correct Answer:** **B**
+Because in Python, a dictionary is created using **curly braces `{}`** with **key: value** pairs.
+
+---
+
+A **quiz question** for creating and writing into a file in Python:
+
+---
+
+**Quiz:**
+Which of the following correctly **creates** a file named `notes.txt` and **writes** `"Hello World"` into it?
+
+A)
+with open("notes.txt", "r") as file:
+    file.write("Hello World")
+
+B)
+with open("notes.txt", "w") as file:
+    file.write("Hello World")
+
+C)
+with open("notes.txt", "a") as file:
+    file.read("Hello World")
+
+D)
+open("notes.txt", "x")
+file.write("Hello World")
+
+---
+
+**Correct Answer:** **B**
+
+* "w" mode creates the file if it doesn’t exist and writes data (overwrites if it exists).
+* "r" mode cannot write, and `"a"` mode appends instead of overwriting.
+
+---
