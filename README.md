@@ -93,9 +93,9 @@ Best Practices
 * Avoid using Python **keywords** as variable names (e.g. `class`, `def`, `if`)
 
 
-
  *Learn more in the* [Python Docs – Variables](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
 
+---
 
 In python, variables are used to store the data that can be referenced
  What is a variable ?
@@ -193,8 +193,6 @@ def greet(name: str) -> str:
 return f"Hello, {name}"
 
 
-
-
 ##  Summary Table
 
 | Category | Types                              |
@@ -209,14 +207,10 @@ return f"Hello, {name}"
 | Special  | `NoneType`                         |
 
 
-
 ##  References
 
 * [Python Official Docs - Data Types](https://docs.python.org/3/library/stdtypes.html)
 * [PEP 484 - Type Hints](https://peps.python.org/pep-0484/)
-
-
-
 
 
 # Python Variable Naming Rules
@@ -240,14 +234,12 @@ _age = 20
 user_1 = "admin"
 pi_value = 3.1415
 
-
-
 ## Invalid Variable Names
 
 python
-2cool = "nope"        # ❌ Starts with a digit
-first-name = "John"   # ❌ Hyphen not allowed
-class = "Physics"     # ❌ 'class' is a reserved keyword
+2cool = "nope"        #  Starts with a digit
+first-name = "John"   #  Hyphen not allowed
+class = "Physics"     #  'class' is a reserved keyword
 
 
 ##  Best Practices (PEP 8 Style Guide)
@@ -271,7 +263,6 @@ class = "Physics"     # ❌ 'class' is a reserved keyword
   * Ambiguous names like `data1`, `data2`, etc.
 
 
-
 ## Reserved Keywords (Don’t Use as Variable Names)
 
 These are built-in and have special meaning in Python:
@@ -293,21 +284,17 @@ print(keyword.kwlist)
 
 | Variable Name | Valid? | Reason                 |
 | ------------- | ------ | ---------------------- |
-| `_user`       | ✅     | Starts with underscore |
-| `user_123`    | ✅     | Alphanumeric + `_`     |
-| `123user`     | ❌     | Starts with digit      |
-| `user-name`   | ❌     | Hyphen not allowed     |
-| `def`         | ❌     | Python keyword         |
-
+| `_user`       |      | Starts with underscore |
+| `user_123`    |      | Alphanumeric + `_`     |
+| `123user`     |      | Starts with digit      |
+| `user-name`   |      | Hyphen not allowed     |
+| `def`         |      | Python keyword         |
 
 
 ##  References
 
 * [PEP 8 - Python Style Guide](https://peps.python.org/pep-0008/#naming-conventions)
 * [Python Keywords (Official Docs)](https://docs.python.org/3/reference/lexical_analysis.html#keywords)
-
-
-
 
 
 ##  Declaring Variables in Python
@@ -320,9 +307,9 @@ python
 variable_name = value
 
 
-* `variable_name`: the name you give to the variable.
-* `=`: the assignment operator.
-* `value`: the data you want to store.
+* variable_name: the name you give to the variable.
+* =: the assignment operator.
+* value: the data you want to store.
 
 ## Example
 
@@ -338,7 +325,6 @@ price = 19.99
 
 # Boolean
 is_active = True
-
 
 ## Variable Naming Rules
 
@@ -751,7 +737,9 @@ print(rounded)
 
  round(number, 2) rounds the number to 2 decimal places.
 
----
+---                                            
+                                                     CHAPTER 2
+													 
 
 ## Comments in Python
 
