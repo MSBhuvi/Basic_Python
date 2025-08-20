@@ -738,7 +738,7 @@ print(rounded)
  round(number, 2) rounds the number to 2 decimal places.
 
 ---                                            
-                                                     CHAPTER 2
+                                                                            CHAPTER 2
 													 
 
 ## Comments in Python
@@ -988,8 +988,11 @@ Age Difference: 12
 
 ---
    
----
 
+                                                                           CHAPTER 3
+
+---
+	  
 ## Escape Sequences in Python
 
 **Escape sequences** are special characters used in strings to represent characters that are otherwise difficult to include directly, like newlines, tabs, quotes, etc.
@@ -1271,8 +1274,8 @@ print("      * * * *")
 ---
 
 ---
-
-## Python Operators – Quick Guide
+                                                                            CHAPTER 4
+## Python Operators 
 
 **Operators** are special symbols used to perform **operations** on variables and values.
 
@@ -1527,7 +1530,7 @@ print(result)  # Output: Hello World
 
 ---
 
- Here's a short example for **concatenating strings using `+=`**:
+A short example for **concatenating strings using `+=`**:
 
 # String Concatenation using +=
 
@@ -1538,7 +1541,8 @@ print(text)  # Output: Hello World
  += adds " World" to the existing text string.
 
 ---
-
+                                                                           CHAPTER 5
+																		   
 ## Comparison Operators in Python 
 
 **Comparison operators** are used to **compare values**. They return either True or False.
@@ -2117,7 +2121,8 @@ Use `in` to check if a substring exists.
 Case-sensitive by default. Use `.lower()` or `.casefold()` for case-insensitive checks.
 
 ---
-
+                                                                           CHAPTER 6
+																		   
 ## String Functions in Python 
 
 Python provides many **built-in string methods**. Here's a quick reference:
@@ -2463,8 +2468,9 @@ D) No output
 * True and True → True
 
 ---
-
-**short explanation** of **loop statements** in Python:
+                                                                                 CHAPTER 7
+																				 
+ **loop statements** in Python:
 
 ---
 
@@ -2847,8 +2853,8 @@ for i in range(1, 10, 3):
 > range(1, 10, 3) starts at **1**, ends **before 10**, and increases by **3** each step → 1, 4, 7, 10 (but 10 is not included), so result is **1, 4, 7, 9**.
 
 ---
-
-A ** explanation of **lists in Python**:
+                                                                             CHAPTER 8
+A explanation of **lists in Python:
 
 ---
 
@@ -3493,8 +3499,9 @@ freelancers = ["Alice", "Bob", "Charlie", "Diana"]
 ['Alice', 'Bob', 'Charlie', 'Diana']
 
 ---
-
-To **declare a dictionary in Python**, with examples.
+                                                                                      CHAPTER 9
+																					  
+To declare a dictionary in Python, with examples.
 
 ---
 
@@ -3910,8 +3917,8 @@ D) Invalid operation
 >  The function returns 10 - 5 which is 5.
 
 ---
-
-Sure! Here's a **short and clear explanation** of **exceptions** in Python:
+                                                                                        CHAPTER 10
+A **short and clear explanation** of **exceptions** in Python:
 
 ---
 
@@ -4284,7 +4291,8 @@ except:
 This is because the `int("abc")` raises a `ValueError`, and the `except` block catches it without specifying the error type.
 
 ---
-
+                                                                                     CHAPTER 11
+																					 
 ## `import random` – Explanation
 
 The `random` module in Python is used to **generate random numbers** or make **random selections**.
@@ -4425,7 +4433,8 @@ Output:
 Current date and time: 2025-07-30 18:15:23.456789
 
 ---
-
+                                                                                CHAPTER 12
+																				
 ## Get only date or time:
 
 today = datetime.date.today()
@@ -4722,7 +4731,8 @@ content = f.read()
 f.close()
 
 ---
-
+                                                                                         CHAPTER 13
+																						 
 ## **Directories (Folders)**
 
 A directory is a **container** for files or other folders.
@@ -4932,8 +4942,9 @@ shutil.rmtree("MyFolder")
 print("Directory and its contents removed successfully!")
 
 ---
-
-let’s go step-by-step through **creating and working with files** in Python.
+                                                                                  CHAPTER 13
+																				  
+ **creating and working with files** in Python.
 
 ---
 
