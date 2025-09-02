@@ -27,7 +27,9 @@ Automation                                   Requestes,selenium,Pyautogui
 HELLO WORLD EXAMPLE 
 
 python
-```print ("hello world")```
+```java
+print ("hello world")
+```
 
 ---
 
