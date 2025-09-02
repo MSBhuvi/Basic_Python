@@ -1,6 +1,9 @@
 # Basic_python
                                                                           CHAPTER 1
 
+What is Python?
+	Python is a popular programming language. It was created by #Guido van Rossum#, and released in 1991.
+
 PYTHON VARIABLES AND DATA TYPES
     - HI Welcome! If you're just starting out python. This guide will give you a quick overview of the fundamentals. 
    -  Python is a powerfull,readable, and beginner-friendly programming language used in web development,AI,
